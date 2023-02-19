@@ -28,5 +28,42 @@ namespace Enigma
         {
 
         }
+
+        private void BtnOpenScan_Click(object sender, EventArgs e)
+        {
+            BasicSetup();
+        }
+
+        private void BasicSetup()
+        {
+
+            Form frmTemp = new Form();
+
+            if (RbtnRotorsAndKEY.Checked)
+            {
+                frmTemp = new FrmRotorsAndKEY();
+            }
+            else if (RbtnRotorRAndRingR.Checked)
+            {
+                //frmTemp = new FrmRotorRAndRingR();
+            }
+            else if (RbtnRotorMAndRingM.Checked)
+            {
+                //frmTemp = new FrmRotorMAndRingM();
+            }
+            else if (RbtnKEYs.Checked)
+            {
+                //frmTemp = new FrmKEYs();
+            }
+
+            frmTemp.TopLevel = false;
+            frmTemp.AutoScroll = true;
+            frmTemp.Dock = DockStyle.Fill;
+            this.PnlDGV.Controls.Add(frmTemp);
+            GbxScanSelection.Enabled = false;
+            frmTemp.Show();
+            GbxScanSelection.Enabled = true;
+
+        }
     }
 }

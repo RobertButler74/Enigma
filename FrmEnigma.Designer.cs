@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PbxEnigma = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.PnlSelection = new System.Windows.Forms.Panel();
             this.GbxScanSelection = new System.Windows.Forms.GroupBox();
@@ -37,22 +36,12 @@
             this.RbtnRotorRAndRingR = new System.Windows.Forms.RadioButton();
             this.RbtnRotorMAndRingM = new System.Windows.Forms.RadioButton();
             this.RbtnKEYs = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxEnigma)).BeginInit();
+            this.PbxEnigma = new System.Windows.Forms.PictureBox();
+            this.PnlDGV = new System.Windows.Forms.Panel();
             this.PnlSelection.SuspendLayout();
             this.GbxScanSelection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxEnigma)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PbxEnigma
-            // 
-            this.PbxEnigma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.PbxEnigma.BackgroundImage = global::Enigma.Properties.Resources._114x50_Enigma_logo;
-            this.PbxEnigma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PbxEnigma.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PbxEnigma.Location = new System.Drawing.Point(0, 0);
-            this.PbxEnigma.Name = "PbxEnigma";
-            this.PbxEnigma.Size = new System.Drawing.Size(1434, 50);
-            this.PbxEnigma.TabIndex = 0;
-            this.PbxEnigma.TabStop = false;
             // 
             // statusStrip1
             // 
@@ -93,6 +82,7 @@
             this.BtnOpenScan.TabIndex = 0;
             this.BtnOpenScan.Text = "Open scan";
             this.BtnOpenScan.UseVisualStyleBackColor = true;
+            this.BtnOpenScan.Click += new System.EventHandler(this.BtnOpenScan_Click);
             // 
             // RbtnRotorsAndKEY
             // 
@@ -136,21 +126,42 @@
             this.RbtnKEYs.Text = "Scan KEYs";
             this.RbtnKEYs.UseVisualStyleBackColor = true;
             // 
+            // PbxEnigma
+            // 
+            this.PbxEnigma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.PbxEnigma.BackgroundImage = global::Enigma.Properties.Resources._114x50_Enigma_logo;
+            this.PbxEnigma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PbxEnigma.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PbxEnigma.Location = new System.Drawing.Point(0, 0);
+            this.PbxEnigma.Name = "PbxEnigma";
+            this.PbxEnigma.Size = new System.Drawing.Size(1434, 50);
+            this.PbxEnigma.TabIndex = 0;
+            this.PbxEnigma.TabStop = false;
+            // 
+            // PnlDGV
+            // 
+            this.PnlDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlDGV.Location = new System.Drawing.Point(275, 50);
+            this.PnlDGV.Name = "PnlDGV";
+            this.PnlDGV.Size = new System.Drawing.Size(1159, 639);
+            this.PnlDGV.TabIndex = 3;
+            // 
             // FrmEnigma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1434, 711);
+            this.Controls.Add(this.PnlDGV);
             this.Controls.Add(this.PnlSelection);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.PbxEnigma);
             this.Name = "FrmEnigma";
             this.Text = "Enigma";
             this.Load += new System.EventHandler(this.FrmEnigma_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PbxEnigma)).EndInit();
             this.PnlSelection.ResumeLayout(false);
             this.GbxScanSelection.ResumeLayout(false);
             this.GbxScanSelection.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxEnigma)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,6 +178,7 @@
         private System.Windows.Forms.RadioButton RbtnRotorRAndRingR;
         private System.Windows.Forms.RadioButton RbtnRotorsAndKEY;
         private System.Windows.Forms.Button BtnOpenScan;
+        private System.Windows.Forms.Panel PnlDGV;
     }
 }
 
