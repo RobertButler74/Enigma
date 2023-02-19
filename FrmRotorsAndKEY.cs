@@ -19,6 +19,8 @@ namespace Enigma
         private readonly string enigmaXmlFilePath = "RotorsAndKEY.xml";
         int _width;
 
+        public static GroupBox ownerGBX;
+
         public FrmRotorsAndKEY()
         {
             InitializeComponent();
@@ -37,7 +39,6 @@ namespace Enigma
             else
             {
                 TsBtnStartScan.Enabled = true;
-                TsBtnExitScan.Enabled = false;
                 SetData.enigmaXmlFilePath = enigmaXmlFilePath;
                 SetData.dgv = DgvDtRotorsAndKEY;
             }            
@@ -65,6 +66,7 @@ namespace Enigma
                 TsBtnStartScan.Image = Resources.power_green;
                 TsBtnStartScan.Tag = "Stop";
                 TsBtnStartScan.Enabled = false;
+                TsBtnExitScan.Enabled = false;
                 BGWCipher.RunWorkerAsync();
             }
         }
@@ -105,6 +107,7 @@ namespace Enigma
                 TsLabelInfo.Text = "";
                 dtRotorsAndKEYBindingNavigator.Refresh();
                 dtRotorsAndKEYBindingNavigator.Update();
+                dtRotorsAndKEYBindingNavigatorSaveItem.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -124,6 +127,7 @@ namespace Enigma
 
         private void TsBtnExitScan_Click(object sender, EventArgs e)
         {
+            ownerGBX.Enabled= true;
             this.Close();
         }
 
@@ -151,34 +155,8 @@ namespace Enigma
         }
 
         private void CreateDataGridViewDATA(string infoText)
-        {
-            //string strIoC;
-            //string strReflector;
-            //string strRotorL;
-            //string strRotorM;
-            //string strRotorR;
-            //string strCipherKEY;
-            //string strPlugs;
-            //string strMessageText;
-            //string strCipherText;
-
+        {            
             string[] infoList = infoText.Split('|');
-
-            //strIoC = infoText.Substring(5, 4);
-            //strReflector = infoText.Substring(10, 1);
-            //infoText = infoText.Substring(13);
-            //strRotorL = infoText.Substring(0, infoText.IndexOf(","));
-            //infoText = infoText.Substring(infoText.IndexOf(",") + 2);
-            //strRotorM = infoText.Substring(0, infoText.IndexOf(","));
-            //infoText = infoText.Substring(infoText.IndexOf(",") + 2);
-            //strRotorR = infoText.Substring(0, infoText.IndexOf("|") - 1);
-            //infoText = infoText.Substring(infoText.IndexOf(":") + 2);
-            //strCipherKEY = infoText.Substring(0, 3);
-            //infoText = infoText.Substring(infoText.IndexOf("|") + 2);
-            //strPlugs = infoText.Substring(0, infoText.IndexOf("|") - 1);
-            //strMessageText = infoText.Substring(infoText.IndexOf(":") + 2, 547);
-            //infoText = infoText.Substring(infoText.IndexOf(":") + 2);
-            //strCipherText = infoText.Substring(infoText.IndexOf(":") + 2, 547);
 
             DataTable table = this.dsEnigmaChallenges.Tables[0];
 
@@ -196,6 +174,7 @@ namespace Enigma
             myDataRow["CipherText"] = infoList[7];
 
             this.dsEnigmaChallenges.Tables[0].Rows.Add(myDataRow);
+            dtRotorsAndKEYBindingNavigatorSaveItem.Enabled = true;
         }
 
         private void BGWCipher_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

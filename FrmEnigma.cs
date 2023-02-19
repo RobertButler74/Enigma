@@ -12,6 +12,7 @@ namespace Enigma
 {
     public partial class FrmEnigma : Form
     {
+
         public FrmEnigma()
         {
             InitializeComponent();
@@ -31,7 +32,8 @@ namespace Enigma
 
         private void BtnOpenScan_Click(object sender, EventArgs e)
         {
-            BasicSetup();
+            GbxScanSelection.Enabled = false;
+            BasicSetup();            
         }
 
         private void BasicSetup()
@@ -60,10 +62,8 @@ namespace Enigma
             frmTemp.AutoScroll = true;
             frmTemp.Dock = DockStyle.Fill;
             this.PnlDGV.Controls.Add(frmTemp);
-            GbxScanSelection.Enabled = false;
-            frmTemp.Show();
-            GbxScanSelection.Enabled = true;
-
+            FrmRotorsAndKEY.ownerGBX = GbxScanSelection;
+            frmTemp.Show();            
         }
     }
 }

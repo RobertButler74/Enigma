@@ -27,9 +27,9 @@ namespace Enigma
             {
                 dataInfo = "lbl";
                 dataInfo += ukw + ": ";
-                dataInfo += walzeL + rings.Substring(0, 1) + ",";
-                dataInfo += walzeM + rings.Substring(1, 1) + ", ";
-                dataInfo += walzeR + rings.Substring(2, 1) + " | ";
+                dataInfo += walzeL + "-" + rings.Substring(0, 1) + ", ";
+                dataInfo += walzeM + "-" + rings.Substring(1, 1) + ", ";
+                dataInfo += walzeR + "-" + rings.Substring(2, 1) + " | ";
                 dataInfo += cipherKEY + " | ";
 
                 for (int i = 0; i <= EnigmaMachine.plugs.Length - 1; i++)
@@ -37,15 +37,15 @@ namespace Enigma
                     dataInfo += EnigmaMachine.plugs[i] + "-";
                 }
 
-                dataInfo = dataInfo.Substring(0, dataInfo.Length - 2);
+                dataInfo = dataInfo.Substring(0, dataInfo.Length - 1);
             }
             else
             {
                 dataInfo = "dgv";
                 dataInfo += ukw + "|";
-                dataInfo += walzeL + rings.Substring(0, 1) + "|";
-                dataInfo += walzeM + rings.Substring(1, 1) + "|";
-                dataInfo += walzeR + rings.Substring(2, 1) + "|";
+                dataInfo += walzeL + "-" + rings.Substring(0, 1) + "|";
+                dataInfo += walzeM + "-" + rings.Substring(1, 1) + "|";
+                dataInfo += walzeR + "-" + rings.Substring(2, 1) + "|";
                 dataInfo += cipherKEY + "|";
 
                 for (int i = 0; i <= EnigmaMachine.plugs.Length - 1; i++)
@@ -53,7 +53,7 @@ namespace Enigma
                     dataInfo += EnigmaMachine.plugs[i] + "-";
                 }
 
-                dataInfo = dataInfo.Substring(0, dataInfo.Length - 2);
+                dataInfo = dataInfo.Substring(0, dataInfo.Length - 1);
                 dataInfo += "|";
                 dataInfo += messageText + "|";
                 dataInfo += cipherText;

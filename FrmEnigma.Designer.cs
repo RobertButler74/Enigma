@@ -53,6 +53,7 @@
             // 
             // PnlSelection
             // 
+            this.PnlSelection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PnlSelection.Controls.Add(this.GbxScanSelection);
             this.PnlSelection.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlSelection.Location = new System.Drawing.Point(0, 50);
@@ -172,13 +173,13 @@
         private System.Windows.Forms.PictureBox PbxEnigma;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Panel PnlSelection;
-        private System.Windows.Forms.GroupBox GbxScanSelection;
         private System.Windows.Forms.RadioButton RbtnKEYs;
         private System.Windows.Forms.RadioButton RbtnRotorMAndRingM;
         private System.Windows.Forms.RadioButton RbtnRotorRAndRingR;
         private System.Windows.Forms.RadioButton RbtnRotorsAndKEY;
         private System.Windows.Forms.Button BtnOpenScan;
         private System.Windows.Forms.Panel PnlDGV;
+        protected internal System.Windows.Forms.GroupBox GbxScanSelection;
     }
 }
 
