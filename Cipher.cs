@@ -20,9 +20,6 @@ namespace Enigma
         public static int intRefID;
         public static int intRefIoC;
 
-        private string cipherKEY;
-        private string rings;
-
         public Cipher()
         {
 
@@ -60,11 +57,7 @@ namespace Enigma
 
             if ((!blIoCDiff && intIoC >= minIoC && !blCompare) || (blIoCDiff && IoCDiff > 0 && !blCompare) || (blCompare && cipherText == compare))
             {
-                string ukw = enigmaMachine.reflector.type;
-                string walzeL = enigmaMachine.rotorL.type;
-                string walzeM = enigmaMachine.rotorM.type;
-                string walzeR = enigmaMachine.rotorR.type;
-                SetXmlData.SetDataInfo(ukw, walzeL, walzeM, walzeR, cipherKEY, rings, message, cipherText);
+                SetData.SetDataInfo(enigmaMachine, message, cipherText);
             }
         }
 

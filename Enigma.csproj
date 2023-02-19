@@ -65,6 +65,7 @@
     <Compile Include="Reflectors.cs" />
     <Compile Include="Rotor.cs" />
     <Compile Include="Rotors.cs" />
+    <Compile Include="SetData.cs" />
     <EmbeddedResource Include="FrmEnigma.resx">
       <DependentUpon>FrmEnigma.cs</DependentUpon>
     </EmbeddedResource>
