@@ -10,9 +10,6 @@ namespace Enigma
     internal class SetData
     {
 
-        public static string enigmaXmlFilePath;
-        public static DataGridView dgv;
-
         public static string SetDataInfo(EnigmaM3 enigmaMachine, string messageText = "", string cipherText = "", bool blDGV = false)
         {
             string ukw = enigmaMachine.reflector.type;

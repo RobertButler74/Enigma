@@ -52,7 +52,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.TsLabelInfo = new System.Windows.Forms.ToolStripLabel();
             this.DgvDtRotorsAndKEY = new System.Windows.Forms.DataGridView();
-            this.BGWCipher = new System.ComponentModel.BackgroundWorker();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reflectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +62,7 @@
             this.plugsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.messageTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cipherTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BGWCipher = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dsEnigmaChallenges)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorsAndKEYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorsAndKEYBindingNavigator)).BeginInit();
@@ -186,7 +186,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -280,14 +279,6 @@
             this.DgvDtRotorsAndKEY.Size = new System.Drawing.Size(1143, 598);
             this.DgvDtRotorsAndKEY.TabIndex = 1;
             // 
-            // BGWCipher
-            // 
-            this.BGWCipher.WorkerReportsProgress = true;
-            this.BGWCipher.WorkerSupportsCancellation = true;
-            this.BGWCipher.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BGWCipher_DoWork);
-            this.BGWCipher.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BGWCipher_ProgressChanged);
-            this.BGWCipher.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BGWCipher_RunWorkerCompleted);
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -364,6 +355,14 @@
             this.cipherTextDataGridViewTextBoxColumn.HeaderText = "Cipher text";
             this.cipherTextDataGridViewTextBoxColumn.Name = "cipherTextDataGridViewTextBoxColumn";
             this.cipherTextDataGridViewTextBoxColumn.Width = 345;
+            // 
+            // BGWCipher
+            // 
+            this.BGWCipher.WorkerReportsProgress = true;
+            this.BGWCipher.WorkerSupportsCancellation = true;
+            this.BGWCipher.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BGWCipher_DoWork);
+            this.BGWCipher.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BGWCipher_ProgressChanged);
+            this.BGWCipher.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BGWCipher_RunWorkerCompleted);
             // 
             // FrmRotorsAndKEY
             // 
