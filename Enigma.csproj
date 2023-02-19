@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analyzation.cs" />
+    <Compile Include="Challenge10Scans.cs" />
     <Compile Include="Cipher.cs" />
     <Compile Include="Combinations.cs" />
     <Compile Include="DsEnigmaChallenges.Designer.cs">
@@ -62,6 +63,12 @@
     <Compile Include="FrmEnigma.Designer.cs">
       <DependentUpon>FrmEnigma.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRotorsAndKEY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRotorsAndKEY.Designer.cs">
+      <DependentUpon>FrmRotorsAndKEY.cs</DependentUpon>
+    </Compile>
     <Compile Include="Keyboard.cs" />
     <Compile Include="Plugboard.cs" />
     <Compile Include="Program.cs" />
@@ -73,6 +80,9 @@
     <Compile Include="SetData.cs" />
     <EmbeddedResource Include="FrmEnigma.resx">
       <DependentUpon>FrmEnigma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRotorsAndKEY.resx">
+      <DependentUpon>FrmRotorsAndKEY.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

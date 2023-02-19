@@ -9,12 +9,11 @@ namespace Enigma
 {
     internal class SetData
     {
-        public SetData(EnigmaM3 enigmaMachine, string messageText, string cipherText)
-        {
-            SetDataInfo(enigmaMachine, messageText, cipherText);
-        }
 
-        public static void SetDataInfo(EnigmaM3 enigmaMachine, string _messageText, string _cipherText)
+        public static string enigmaXmlFilePath;
+        public static DataGridView dgv;
+
+        public static string SetDataInfo(EnigmaM3 enigmaMachine, string messageText = "", string cipherText = "", bool blDGV = false)
         {
             string ukw = enigmaMachine.reflector.type;
             string walzeL = enigmaMachine.rotorL.type;
@@ -22,12 +21,48 @@ namespace Enigma
             string walzeR = enigmaMachine.rotorR.type;
             string cipherKEY = enigmaMachine.cipherKey;
             string rings = enigmaMachine.rings;
-            string messageText = _messageText;
-            string cipherText = _cipherText;
 
+            string dataInfo;
+            if (!blDGV)
+            {
+                dataInfo = "lbl";
+                dataInfo += ukw + ": ";
+                dataInfo += walzeL + rings.Substring(0, 1) + ",";
+                dataInfo += walzeM + rings.Substring(1, 1) + ", ";
+                dataInfo += walzeR + rings.Substring(2, 1) + " | ";
+                dataInfo += cipherKEY + " | ";
+
+                for (int i = 0; i <= EnigmaMachine.plugs.Length - 1; i++)
+                {
+                    dataInfo += EnigmaMachine.plugs[i] + "-";
+                }
+
+                dataInfo = dataInfo.Substring(0, dataInfo.Length - 2);
+            }
+            else
+            {
+                dataInfo = "dgv";
+                dataInfo += ukw + "|";
+                dataInfo += walzeL + rings.Substring(0, 1) + "|";
+                dataInfo += walzeM + rings.Substring(1, 1) + "|";
+                dataInfo += walzeR + rings.Substring(2, 1) + "|";
+                dataInfo += cipherKEY + "|";
+
+                for (int i = 0; i <= EnigmaMachine.plugs.Length - 1; i++)
+                {
+                    dataInfo += EnigmaMachine.plugs[i] + "-";
+                }
+
+                dataInfo = dataInfo.Substring(0, dataInfo.Length - 2);
+                dataInfo += "|";
+                dataInfo += messageText + "|";
+                dataInfo += cipherText;
+            }
+            
+           
+            return dataInfo;
 
 
         }
-
     }
 }

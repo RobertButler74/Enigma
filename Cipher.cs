@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Enigma
 {
     internal class Cipher
     {
+        public static BackgroundWorker BGWCipher;
 
-        public static string message;
+        public static string messageText;
         public static string cipherText;
         public static int minIoC;
         public static string compare;
@@ -19,6 +21,9 @@ namespace Enigma
 
         public static int intRefID;
         public static int intRefIoC;
+
+        public static int intIoC;
+        public static int IoCDiff;
 
         public Cipher()
         {
@@ -35,7 +40,7 @@ namespace Enigma
             // encipher message     
             string cipher_text;
             cipher_text = "";
-            foreach (char letter in message)
+            foreach (char letter in messageText)
                 cipher_text += enigmaMachine.Encipher(letter.ToString());
 
             return cipher_text;
@@ -45,10 +50,12 @@ namespace Enigma
         {
             cipherText = EnigmaCipher(enigmaMachine);
 
+            string dataInfo = SetData.SetDataInfo(enigmaMachine);
+            BGWCipher.ReportProgress(0, dataInfo);
+
             double IoC = Analyzation.MonogramIOC(cipherText);
             IoC = Math.Round(IoC, 5);
-            int intIoC = Convert.ToInt32(IoC * 100000);
-            int IoCDiff = 0;
+            intIoC = Convert.ToInt32(IoC * 100000);
 
             if (blIoCDiff)
             {
@@ -57,9 +64,20 @@ namespace Enigma
 
             if ((!blIoCDiff && intIoC >= minIoC && !blCompare) || (blIoCDiff && IoCDiff > 0 && !blCompare) || (blCompare && cipherText == compare))
             {
-                SetData.SetDataInfo(enigmaMachine, message, cipherText);
+                dataInfo = SetData.SetDataInfo(enigmaMachine, messageText,cipherText, true);
+                BGWCipher.ReportProgress(1, dataInfo);
+                Thread.Sleep(50);
+            }
+
+            /*
+            Needed this time, because on the 2nd and 3rd scan, the IoCDiff in the table was
+            negative, even though I just wanted them to be bigger then 0.
+            This slowed the program down immensely. The 1st scan, went form 1 hour to 8 hours
+            */
+            if (blIoCDiff)
+            {
+                Thread.Sleep(25);
             }
         }
-
     }
 }

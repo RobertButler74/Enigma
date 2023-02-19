@@ -9,7 +9,7 @@ namespace Enigma
     internal class EnigmaMachine
     {
 
-        public static string[] plugs = new string[11];
+        public static string[] plugs = new string[10];
 
         public static void EnigmaSetup(Nullable<int> ukw, Nullable<int> walzen = null, string cipherKEY = null, string rings = null, Nullable<int> anzahlWalzen = 5)
         {
