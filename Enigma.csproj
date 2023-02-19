@@ -49,6 +49,11 @@
     <Compile Include="Analyzation.cs" />
     <Compile Include="Cipher.cs" />
     <Compile Include="Combinations.cs" />
+    <Compile Include="DsEnigmaChallenges.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsEnigmaChallenges.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EnigmaM3.cs" />
     <Compile Include="EnigmaMachine.cs" />
     <Compile Include="FrmEnigma.cs">
@@ -79,6 +84,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DsEnigmaChallenges.xsc">
+      <DependentUpon>DsEnigmaChallenges.xsd</DependentUpon>
+    </None>
+    <None Include="DsEnigmaChallenges.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsEnigmaChallenges.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsEnigmaChallenges.xss">
+      <DependentUpon>DsEnigmaChallenges.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

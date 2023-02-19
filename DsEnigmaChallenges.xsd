@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsEnigmaChallenges" targetNamespace="http://tempuri.org/DsEnigmaChallenges.xsd" xmlns:mstns="http://tempuri.org/DsEnigmaChallenges.xsd" xmlns="http://tempuri.org/DsEnigmaChallenges.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsEnigmaChallenges" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DsEnigmaChallenges" msprop:Generator_DataSetName="DsEnigmaChallenges">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtRotorsAndKEY" msprop:Generator_RowEvHandlerName="dtRotorsAndKEYRowChangeEventHandler" msprop:Generator_RowDeletedName="dtRotorsAndKEYRowDeleted" msprop:Generator_RowDeletingName="dtRotorsAndKEYRowDeleting" msprop:Generator_RowEvArgName="dtRotorsAndKEYRowChangeEvent" msprop:Generator_TablePropName="dtRotorsAndKEY" msprop:Generator_RowChangedName="dtRotorsAndKEYRowChanged" msprop:Generator_RowChangingName="dtRotorsAndKEYRowChanging" msprop:Generator_TableClassName="dtRotorsAndKEYDataTable" msprop:Generator_RowClassName="dtRotorsAndKEYRow" msprop:Generator_TableVarName="tabledtRotorsAndKEY" msprop:Generator_UserTableName="dtRotorsAndKEY">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="IoC" msprop:Generator_ColumnPropNameInRow="IoC" msprop:Generator_ColumnPropNameInTable="IoCColumn" msprop:Generator_ColumnVarNameInTable="columnIoC" msprop:Generator_UserColumnName="IoC" type="xs:int" minOccurs="0" />
+              <xs:element name="Reflector" msprop:Generator_ColumnPropNameInRow="Reflector" msprop:Generator_ColumnPropNameInTable="ReflectorColumn" msprop:Generator_ColumnVarNameInTable="columnReflector" msprop:Generator_UserColumnName="Reflector" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorLeft" msprop:Generator_ColumnPropNameInRow="RotorLeft" msprop:Generator_ColumnPropNameInTable="RotorLeftColumn" msprop:Generator_ColumnVarNameInTable="columnRotorLeft" msprop:Generator_UserColumnName="RotorLeft" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorMiddle" msprop:Generator_ColumnPropNameInRow="RotorMiddle" msprop:Generator_ColumnPropNameInTable="RotorMiddleColumn" msprop:Generator_ColumnVarNameInTable="columnRotorMiddle" msprop:Generator_UserColumnName="RotorMiddle" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorRight" msprop:Generator_ColumnPropNameInRow="RotorRight" msprop:Generator_ColumnPropNameInTable="RotorRightColumn" msprop:Generator_ColumnVarNameInTable="columnRotorRight" msprop:Generator_UserColumnName="RotorRight" type="xs:string" minOccurs="0" />
+              <xs:element name="CipherKEY" msprop:Generator_ColumnPropNameInRow="CipherKEY" msprop:Generator_ColumnPropNameInTable="CipherKEYColumn" msprop:Generator_ColumnVarNameInTable="columnCipherKEY" msprop:Generator_UserColumnName="CipherKEY" type="xs:string" minOccurs="0" />
+              <xs:element name="Plugs" msprop:Generator_ColumnPropNameInRow="Plugs" msprop:Generator_ColumnPropNameInTable="PlugsColumn" msprop:Generator_ColumnVarNameInTable="columnPlugs" msprop:Generator_UserColumnName="Plugs" type="xs:string" minOccurs="0" />
+              <xs:element name="MessageText" msprop:Generator_ColumnPropNameInRow="MessageText" msprop:Generator_ColumnPropNameInTable="MessageTextColumn" msprop:Generator_ColumnVarNameInTable="columnMessageText" msprop:Generator_UserColumnName="MessageText" type="xs:string" minOccurs="0" />
+              <xs:element name="CipherText" msprop:Generator_ColumnPropNameInRow="CipherText" msprop:Generator_ColumnPropNameInTable="CipherTextColumn" msprop:Generator_ColumnVarNameInTable="columnCipherText" msprop:Generator_UserColumnName="CipherText" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtRotorRAndRingR" msprop:Generator_RowEvHandlerName="dtRotorRAndRingRRowChangeEventHandler" msprop:Generator_RowDeletedName="dtRotorRAndRingRRowDeleted" msprop:Generator_RowDeletingName="dtRotorRAndRingRRowDeleting" msprop:Generator_RowEvArgName="dtRotorRAndRingRRowChangeEvent" msprop:Generator_TablePropName="dtRotorRAndRingR" msprop:Generator_RowChangedName="dtRotorRAndRingRRowChanged" msprop:Generator_RowChangingName="dtRotorRAndRingRRowChanging" msprop:Generator_TableClassName="dtRotorRAndRingRDataTable" msprop:Generator_RowClassName="dtRotorRAndRingRRow" msprop:Generator_TableVarName="tabledtRotorRAndRingR" msprop:Generator_UserTableName="dtRotorRAndRingR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ref_ID" msprop:Generator_ColumnPropNameInRow="ref_ID" msprop:Generator_ColumnPropNameInTable="ref_IDColumn" msprop:Generator_ColumnVarNameInTable="columnref_ID" msprop:Generator_UserColumnName="ref_ID" type="xs:string" />
+              <xs:element name="IoC" msprop:Generator_ColumnPropNameInRow="IoC" msprop:Generator_ColumnPropNameInTable="IoCColumn" msprop:Generator_ColumnVarNameInTable="columnIoC" msprop:Generator_UserColumnName="IoC" type="xs:int" minOccurs="0" />
+              <xs:element name="ref_IoC" msprop:Generator_ColumnPropNameInRow="ref_IoC" msprop:Generator_ColumnPropNameInTable="ref_IoCColumn" msprop:Generator_ColumnVarNameInTable="columnref_IoC" msprop:Generator_UserColumnName="ref_IoC" type="xs:int" minOccurs="0" />
+              <xs:element name="IoCDifference" msprop:Generator_ColumnPropNameInRow="IoCDifference" msprop:Generator_ColumnPropNameInTable="IoCDifferenceColumn" msprop:Generator_ColumnVarNameInTable="columnIoCDifference" msprop:Generator_UserColumnName="IoCDifference" type="xs:int" minOccurs="0" />
+              <xs:element name="Reflector" msprop:Generator_ColumnPropNameInRow="Reflector" msprop:Generator_ColumnPropNameInTable="ReflectorColumn" msprop:Generator_ColumnVarNameInTable="columnReflector" msprop:Generator_UserColumnName="Reflector" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorLeft" msprop:Generator_ColumnPropNameInRow="RotorLeft" msprop:Generator_ColumnPropNameInTable="RotorLeftColumn" msprop:Generator_ColumnVarNameInTable="columnRotorLeft" msprop:Generator_UserColumnName="RotorLeft" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorMiddle" msprop:Generator_ColumnPropNameInRow="RotorMiddle" msprop:Generator_ColumnPropNameInTable="RotorMiddleColumn" msprop:Generator_ColumnVarNameInTable="columnRotorMiddle" msprop:Generator_UserColumnName="RotorMiddle" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorRight" msprop:Generator_ColumnPropNameInRow="RotorRight" msprop:Generator_ColumnPropNameInTable="RotorRightColumn" msprop:Generator_ColumnVarNameInTable="columnRotorRight" msprop:Generator_UserColumnName="RotorRight" type="xs:string" minOccurs="0" />
+              <xs:element name="CipherKEY" msprop:Generator_ColumnPropNameInRow="CipherKEY" msprop:Generator_ColumnPropNameInTable="CipherKEYColumn" msprop:Generator_ColumnVarNameInTable="columnCipherKEY" msprop:Generator_UserColumnName="CipherKEY" type="xs:string" minOccurs="0" />
+              <xs:element name="Plugs" msprop:Generator_ColumnPropNameInRow="Plugs" msprop:Generator_ColumnPropNameInTable="PlugsColumn" msprop:Generator_ColumnVarNameInTable="columnPlugs" msprop:Generator_UserColumnName="Plugs" type="xs:string" minOccurs="0" />
+              <xs:element name="MessageText" msprop:Generator_ColumnPropNameInRow="MessageText" msprop:Generator_ColumnPropNameInTable="MessageTextColumn" msprop:Generator_ColumnVarNameInTable="columnMessageText" msprop:Generator_UserColumnName="MessageText" type="xs:string" minOccurs="0" />
+              <xs:element name="CipherText" msprop:Generator_ColumnPropNameInRow="CipherText" msprop:Generator_ColumnPropNameInTable="CipherTextColumn" msprop:Generator_ColumnVarNameInTable="columnCipherText" msprop:Generator_UserColumnName="CipherText" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtRotorMAndRingM" msprop:Generator_RowEvHandlerName="dtRotorMAndRingMRowChangeEventHandler" msprop:Generator_RowDeletedName="dtRotorMAndRingMRowDeleted" msprop:Generator_RowDeletingName="dtRotorMAndRingMRowDeleting" msprop:Generator_RowEvArgName="dtRotorMAndRingMRowChangeEvent" msprop:Generator_TablePropName="dtRotorMAndRingM" msprop:Generator_RowChangedName="dtRotorMAndRingMRowChanged" msprop:Generator_RowChangingName="dtRotorMAndRingMRowChanging" msprop:Generator_TableClassName="dtRotorMAndRingMDataTable" msprop:Generator_RowClassName="dtRotorMAndRingMRow" msprop:Generator_TableVarName="tabledtRotorMAndRingM" msprop:Generator_UserTableName="dtRotorMAndRingM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ref_ID" msprop:Generator_ColumnPropNameInRow="ref_ID" msprop:Generator_ColumnPropNameInTable="ref_IDColumn" msprop:Generator_ColumnVarNameInTable="columnref_ID" msprop:Generator_UserColumnName="ref_ID" type="xs:string" />
+              <xs:element name="IoC" msprop:Generator_ColumnPropNameInRow="IoC" msprop:Generator_ColumnPropNameInTable="IoCColumn" msprop:Generator_ColumnVarNameInTable="columnIoC" msprop:Generator_UserColumnName="IoC" type="xs:int" minOccurs="0" />
+              <xs:element name="ref_IoC" msprop:Generator_ColumnPropNameInRow="ref_IoC" msprop:Generator_ColumnPropNameInTable="ref_IoCColumn" msprop:Generator_ColumnVarNameInTable="columnref_IoC" msprop:Generator_UserColumnName="ref_IoC" type="xs:int" minOccurs="0" />
+              <xs:element name="IoCDifference" msprop:Generator_ColumnPropNameInRow="IoCDifference" msprop:Generator_ColumnPropNameInTable="IoCDifferenceColumn" msprop:Generator_ColumnVarNameInTable="columnIoCDifference" msprop:Generator_UserColumnName="IoCDifference" type="xs:int" minOccurs="0" />
+              <xs:element name="Reflector" msprop:Generator_ColumnPropNameInRow="Reflector" msprop:Generator_ColumnPropNameInTable="ReflectorColumn" msprop:Generator_ColumnVarNameInTable="columnReflector" msprop:Generator_UserColumnName="Reflector" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorLeft" msprop:Generator_ColumnPropNameInRow="RotorLeft" msprop:Generator_ColumnPropNameInTable="RotorLeftColumn" msprop:Generator_ColumnVarNameInTable="columnRotorLeft" msprop:Generator_UserColumnName="RotorLeft" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorMiddle" msprop:Generator_ColumnPropNameInRow="RotorMiddle" msprop:Generator_ColumnPropNameInTable="RotorMiddleColumn" msprop:Generator_ColumnVarNameInTable="columnRotorMiddle" msprop:Generator_UserColumnName="RotorMiddle" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorRight" msprop:Generator_ColumnPropNameInRow="RotorRight" msprop:Generator_ColumnPropNameInTable="RotorRightColumn" msprop:Generator_ColumnVarNameInTable="columnRotorRight" msprop:Generator_UserColumnName="RotorRight" type="xs:string" minOccurs="0" />
+              <xs:element name="CipherKEY" msprop:Generator_ColumnPropNameInRow="CipherKEY" msprop:Generator_ColumnPropNameInTable="CipherKEYColumn" msprop:Generator_ColumnVarNameInTable="columnCipherKEY" msprop:Generator_UserColumnName="CipherKEY" type="xs:string" minOccurs="0" />
+              <xs:element name="Plugs" msprop:Generator_ColumnPropNameInRow="Plugs" msprop:Generator_ColumnPropNameInTable="PlugsColumn" msprop:Generator_ColumnVarNameInTable="columnPlugs" msprop:Generator_UserColumnName="Plugs" type="xs:string" minOccurs="0" />
+              <xs:element name="MessageText" msprop:Generator_ColumnPropNameInRow="MessageText" msprop:Generator_ColumnPropNameInTable="MessageTextColumn" msprop:Generator_ColumnVarNameInTable="columnMessageText" msprop:Generator_UserColumnName="MessageText" type="xs:string" minOccurs="0" />
+              <xs:element name="CipherText" msprop:Generator_ColumnPropNameInRow="CipherText" msprop:Generator_ColumnPropNameInTable="CipherTextColumn" msprop:Generator_ColumnVarNameInTable="columnCipherText" msprop:Generator_UserColumnName="CipherText" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtKEYs" msprop:Generator_RowEvHandlerName="dtKEYsRowChangeEventHandler" msprop:Generator_RowDeletedName="dtKEYsRowDeleted" msprop:Generator_RowDeletingName="dtKEYsRowDeleting" msprop:Generator_RowEvArgName="dtKEYsRowChangeEvent" msprop:Generator_TablePropName="dtKEYs" msprop:Generator_RowChangedName="dtKEYsRowChanged" msprop:Generator_RowChangingName="dtKEYsRowChanging" msprop:Generator_TableClassName="dtKEYsDataTable" msprop:Generator_RowClassName="dtKEYsRow" msprop:Generator_TableVarName="tabledtKEYs" msprop:Generator_UserTableName="dtKEYs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="IoC" msprop:Generator_ColumnPropNameInRow="IoC" msprop:Generator_ColumnPropNameInTable="IoCColumn" msprop:Generator_ColumnVarNameInTable="columnIoC" msprop:Generator_UserColumnName="IoC" type="xs:int" minOccurs="0" />
+              <xs:element name="Reflector" msprop:Generator_ColumnPropNameInRow="Reflector" msprop:Generator_ColumnPropNameInTable="ReflectorColumn" msprop:Generator_ColumnVarNameInTable="columnReflector" msprop:Generator_UserColumnName="Reflector" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorLeft" msprop:Generator_ColumnPropNameInRow="RotorLeft" msprop:Generator_ColumnPropNameInTable="RotorLeftColumn" msprop:Generator_ColumnVarNameInTable="columnRotorLeft" msprop:Generator_UserColumnName="RotorLeft" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorMiddle" msprop:Generator_ColumnPropNameInRow="RotorMiddle" msprop:Generator_ColumnPropNameInTable="RotorMiddleColumn" msprop:Generator_ColumnVarNameInTable="columnRotorMiddle" msprop:Generator_UserColumnName="RotorMiddle" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorRight" msprop:Generator_ColumnPropNameInRow="RotorRight" msprop:Generator_ColumnPropNameInTable="RotorRightColumn" msprop:Generator_ColumnVarNameInTable="columnRotorRight" msprop:Generator_UserColumnName="RotorRight" type="xs:string" minOccurs="0" />
+              <xs:element name="CipherKEY" msprop:Generator_ColumnPropNameInRow="CipherKEY" msprop:Generator_ColumnPropNameInTable="CipherKEYColumn" msprop:Generator_ColumnVarNameInTable="columnCipherKEY" msprop:Generator_UserColumnName="CipherKEY" type="xs:string" minOccurs="0" />
+              <xs:element name="Plugs" msprop:Generator_ColumnPropNameInRow="Plugs" msprop:Generator_ColumnPropNameInTable="PlugsColumn" msprop:Generator_ColumnVarNameInTable="columnPlugs" msprop:Generator_UserColumnName="Plugs" type="xs:string" minOccurs="0" />
+              <xs:element name="MessageText" msprop:Generator_ColumnPropNameInRow="MessageText" msprop:Generator_ColumnPropNameInTable="MessageTextColumn" msprop:Generator_ColumnVarNameInTable="columnMessageText" msprop:Generator_UserColumnName="MessageText" type="xs:string" minOccurs="0" />
+              <xs:element name="CipherText" msprop:Generator_ColumnPropNameInRow="CipherText" msprop:Generator_ColumnPropNameInTable="CipherTextColumn" msprop:Generator_ColumnVarNameInTable="columnCipherText" msprop:Generator_UserColumnName="CipherText" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:dtRotorsAndKEY" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="dtRotorRAndRingR_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:dtRotorRAndRingR" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="dtRotorMAndRingM_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:dtRotorMAndRingM" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="dtKEYs_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:dtKEYs" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
