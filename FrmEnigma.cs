@@ -44,10 +44,12 @@ namespace Enigma
             if (RbtnRotorsAndKEY.Checked)
             {
                 frmTemp = new FrmRotorsAndKEY();
+                FrmRotorsAndKEY.ownerGBX = GbxScanSelection;
             }
             else if (RbtnRotorRAndRingR.Checked)
             {
                 frmTemp = new FrmRotorRAndRingR();
+                FrmRotorRAndRingR.ownerGBX = GbxScanSelection;
             }
             else if (RbtnRotorMAndRingM.Checked)
             {
@@ -62,7 +64,6 @@ namespace Enigma
             frmTemp.AutoScroll = true;
             frmTemp.Dock = DockStyle.Fill;
             this.PnlDGV.Controls.Add(frmTemp);
-            FrmRotorsAndKEY.ownerGBX = GbxScanSelection;
             frmTemp.Show();            
         }
     }
