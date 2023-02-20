@@ -63,6 +63,12 @@
     <Compile Include="FrmEnigma.Designer.cs">
       <DependentUpon>FrmEnigma.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRotorMAndRingM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRotorMAndRingM.Designer.cs">
+      <DependentUpon>FrmRotorMAndRingM.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRotorRAndRingR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="SetData.cs" />
     <EmbeddedResource Include="FrmEnigma.resx">
       <DependentUpon>FrmEnigma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRotorMAndRingM.resx">
+      <DependentUpon>FrmRotorMAndRingM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRotorRAndRingR.resx">
       <DependentUpon>FrmRotorRAndRingR.cs</DependentUpon>

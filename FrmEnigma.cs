@@ -53,7 +53,8 @@ namespace Enigma
             }
             else if (RbtnRotorMAndRingM.Checked)
             {
-                //frmTemp = new FrmRotorMAndRingM();
+                frmTemp = new FrmRotorMAndRingM();
+                FrmRotorMAndRingM.ownerGBX = GbxScanSelection;
             }
             else if (RbtnKEYs.Checked)
             {
