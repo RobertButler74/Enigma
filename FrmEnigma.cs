@@ -67,5 +67,10 @@ namespace Enigma
             this.PnlDGV.Controls.Add(frmTemp);
             frmTemp.Show();            
         }
+
+        private void BtnTestPlugs_Click(object sender, EventArgs e)
+        {
+            EnigmaMachine.SetPlugs(1, 2);
+        }
     }
 }

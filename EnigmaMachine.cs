@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +11,75 @@ namespace Enigma
     internal class EnigmaMachine
     {
 
-        public static string[] plugs = new string[10];
+        public static string[] plugs = new string[11];
+        public static int counter = 0;
+
+        public static void SetPlugs(int fromPlug, int toPlug)
+        {
+            int index;
+            for (index = fromPlug; index <= toPlug; index++)
+                SetPlug(index, toPlug);
+
+            Array.Clear(plugs, 0, plugs.Length);
+        }
+
+        public static void SetPlug(int plugNumber, int maxPlugs = 10, int indexPlugStart = 0)
+        {
+            int index;
+            int indexPlugNumber;
+            int maxPlug;
+            int origPlug;
+            string plugFirst;
+            string plugSecond;
+            string plugCombi;
+            int intContains;
+            
+
+            maxPlug = Combinations.PlugCombi.Length - 1 - maxPlugs + plugNumber;
+            origPlug = plugNumber;
+            for (index = indexPlugStart; index <= maxPlug; index++)
+            {
+                plugCombi = Combinations.PlugCombi[index];
+                intContains = 0;
+                for (indexPlugNumber = 1; indexPlugNumber <= plugNumber - 1; indexPlugNumber++)
+                {
+                    plugFirst = plugs[indexPlugNumber].Substring(0, 1);
+                    plugSecond = plugs[indexPlugNumber].Substring(1, 1);
+                    if (plugCombi.Contains(plugFirst) == true || plugCombi.Contains(plugSecond) == true)
+                        intContains += 1;
+                    else
+                    {
+                    }
+                }
+
+                if (intContains == 0)
+                {
+                    plugs[plugNumber] = plugCombi;
+                    if (plugNumber + 1 < maxPlugs + 1)
+                    {
+                        plugNumber += 1;
+                        SetPlug(plugNumber, maxPlugs, index + 1);
+                        plugNumber = origPlug;
+                    }
+                    if (plugNumber == maxPlugs)
+                    {
+                        counter += 1;
+                        string strCounter = counter.ToString("# ###");
+                        strCounter = "Count: " + strCounter;
+                        string msg = "Plugs: ";
+                        for (int indexPlugs = 1; indexPlugs <= maxPlugs; indexPlugs++)
+                        {
+                            msg += plugs[indexPlugs];
+                            msg += "-";
+                        }
+                        msg = msg.Substring(0, msg.Length - 1);
+                        Debug.WriteLine(strCounter);
+                        Debug.WriteLine(msg);
+                        Debug.WriteLine("");
+                    }
+                }
+            }
+        }
 
         public static void EnigmaSetup(Nullable<int> ukw, Nullable<int> walzen = null, string cipherKEY = null, string rings = null, Nullable<int> anzahlWalzen = 5)
         {

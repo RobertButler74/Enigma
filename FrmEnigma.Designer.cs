@@ -36,8 +36,9 @@
             this.RbtnRotorRAndRingR = new System.Windows.Forms.RadioButton();
             this.RbtnRotorMAndRingM = new System.Windows.Forms.RadioButton();
             this.RbtnKEYs = new System.Windows.Forms.RadioButton();
-            this.PbxEnigma = new System.Windows.Forms.PictureBox();
             this.PnlDGV = new System.Windows.Forms.Panel();
+            this.PbxEnigma = new System.Windows.Forms.PictureBox();
+            this.BtnTestPlugs = new System.Windows.Forms.Button();
             this.PnlSelection.SuspendLayout();
             this.GbxScanSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxEnigma)).BeginInit();
@@ -54,6 +55,7 @@
             // PnlSelection
             // 
             this.PnlSelection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlSelection.Controls.Add(this.BtnTestPlugs);
             this.PnlSelection.Controls.Add(this.GbxScanSelection);
             this.PnlSelection.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlSelection.Location = new System.Drawing.Point(0, 50);
@@ -127,6 +129,14 @@
             this.RbtnKEYs.Text = "Scan KEYs";
             this.RbtnKEYs.UseVisualStyleBackColor = true;
             // 
+            // PnlDGV
+            // 
+            this.PnlDGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlDGV.Location = new System.Drawing.Point(275, 50);
+            this.PnlDGV.Name = "PnlDGV";
+            this.PnlDGV.Size = new System.Drawing.Size(1159, 639);
+            this.PnlDGV.TabIndex = 3;
+            // 
             // PbxEnigma
             // 
             this.PbxEnigma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
@@ -139,13 +149,15 @@
             this.PbxEnigma.TabIndex = 0;
             this.PbxEnigma.TabStop = false;
             // 
-            // PnlDGV
+            // BtnTestPlugs
             // 
-            this.PnlDGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlDGV.Location = new System.Drawing.Point(275, 50);
-            this.PnlDGV.Name = "PnlDGV";
-            this.PnlDGV.Size = new System.Drawing.Size(1159, 639);
-            this.PnlDGV.TabIndex = 3;
+            this.BtnTestPlugs.Location = new System.Drawing.Point(11, 168);
+            this.BtnTestPlugs.Name = "BtnTestPlugs";
+            this.BtnTestPlugs.Size = new System.Drawing.Size(75, 23);
+            this.BtnTestPlugs.TabIndex = 1;
+            this.BtnTestPlugs.Text = "Test plugs";
+            this.BtnTestPlugs.UseVisualStyleBackColor = true;
+            this.BtnTestPlugs.Click += new System.EventHandler(this.BtnTestPlugs_Click);
             // 
             // FrmEnigma
             // 
@@ -180,6 +192,7 @@
         private System.Windows.Forms.Button BtnOpenScan;
         private System.Windows.Forms.Panel PnlDGV;
         protected internal System.Windows.Forms.GroupBox GbxScanSelection;
+        private System.Windows.Forms.Button BtnTestPlugs;
     }
 }
 
