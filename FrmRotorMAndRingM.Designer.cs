@@ -52,20 +52,20 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.TsLabelInfo = new System.Windows.Forms.ToolStripLabel();
             this.DgvDtRotorMAndRingM = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BGWCipher = new System.ComponentModel.BackgroundWorker();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refIOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iOCDifferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reflectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rotorLeftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rotorMiddleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rotorRightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cipherKEYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plugsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messageTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cipherTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dsEnigmaChallenges)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorMAndRingMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorMAndRingMBindingNavigator)).BeginInit();
@@ -265,125 +265,26 @@
             this.DgvDtRotorMAndRingM.AutoGenerateColumns = false;
             this.DgvDtRotorMAndRingM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvDtRotorMAndRingM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
+            this.iDDataGridViewTextBoxColumn,
+            this.refIDDataGridViewTextBoxColumn,
+            this.iOCDataGridViewTextBoxColumn,
+            this.refIOCDataGridViewTextBoxColumn,
+            this.iOCDifferenceDataGridViewTextBoxColumn,
+            this.reflectorDataGridViewTextBoxColumn,
+            this.rotorLeftDataGridViewTextBoxColumn,
+            this.rotorMiddleDataGridViewTextBoxColumn,
+            this.rotorRightDataGridViewTextBoxColumn,
+            this.cipherKEYDataGridViewTextBoxColumn,
+            this.plugsDataGridViewTextBoxColumn,
+            this.messageTextDataGridViewTextBoxColumn,
+            this.cipherTextDataGridViewTextBoxColumn});
             this.DgvDtRotorMAndRingM.DataSource = this.dtRotorMAndRingMBindingSource;
             this.DgvDtRotorMAndRingM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvDtRotorMAndRingM.Location = new System.Drawing.Point(0, 25);
             this.DgvDtRotorMAndRingM.Name = "DgvDtRotorMAndRingM";
+            this.DgvDtRotorMAndRingM.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.DgvDtRotorMAndRingM.Size = new System.Drawing.Size(1143, 598);
             this.DgvDtRotorMAndRingM.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ref_ID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ref. ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "IoC";
-            this.dataGridViewTextBoxColumn3.HeaderText = "IoC";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn3.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ref_IoC";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ref. IoC";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn4.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "IoCDifference";
-            this.dataGridViewTextBoxColumn5.HeaderText = "IoC diff.";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn5.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Reflector";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Reflector";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn6.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "RotorLeft";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Rotor left";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn7.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "RotorMiddle";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Rotor middle";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn8.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "RotorRight";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Rotor right";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn9.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "CipherKEY";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Cipher KEY";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn10.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Plugs";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Plugs";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "MessageText";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Message text";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 285;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "CipherText";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Cipher text";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 285;
             // 
             // BGWCipher
             // 
@@ -392,6 +293,106 @@
             this.BGWCipher.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BGWCipher_DoWork);
             this.BGWCipher.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BGWCipher_ProgressChanged);
             this.BGWCipher.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BGWCipher_RunWorkerCompleted);
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.iDDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // refIDDataGridViewTextBoxColumn
+            // 
+            this.refIDDataGridViewTextBoxColumn.DataPropertyName = "ref_ID";
+            this.refIDDataGridViewTextBoxColumn.HeaderText = "ref. ID";
+            this.refIDDataGridViewTextBoxColumn.Name = "refIDDataGridViewTextBoxColumn";
+            this.refIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.refIDDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // iOCDataGridViewTextBoxColumn
+            // 
+            this.iOCDataGridViewTextBoxColumn.DataPropertyName = "IOC";
+            this.iOCDataGridViewTextBoxColumn.HeaderText = "IOC";
+            this.iOCDataGridViewTextBoxColumn.Name = "iOCDataGridViewTextBoxColumn";
+            this.iOCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.iOCDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // refIOCDataGridViewTextBoxColumn
+            // 
+            this.refIOCDataGridViewTextBoxColumn.DataPropertyName = "ref_IOC";
+            this.refIOCDataGridViewTextBoxColumn.HeaderText = "ref. IOC";
+            this.refIOCDataGridViewTextBoxColumn.Name = "refIOCDataGridViewTextBoxColumn";
+            this.refIOCDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.refIOCDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // iOCDifferenceDataGridViewTextBoxColumn
+            // 
+            this.iOCDifferenceDataGridViewTextBoxColumn.DataPropertyName = "IOCDifference";
+            this.iOCDifferenceDataGridViewTextBoxColumn.HeaderText = "IOC diff.";
+            this.iOCDifferenceDataGridViewTextBoxColumn.Name = "iOCDifferenceDataGridViewTextBoxColumn";
+            this.iOCDifferenceDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.iOCDifferenceDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // reflectorDataGridViewTextBoxColumn
+            // 
+            this.reflectorDataGridViewTextBoxColumn.DataPropertyName = "Reflector";
+            this.reflectorDataGridViewTextBoxColumn.HeaderText = "Reflector";
+            this.reflectorDataGridViewTextBoxColumn.Name = "reflectorDataGridViewTextBoxColumn";
+            this.reflectorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.reflectorDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // rotorLeftDataGridViewTextBoxColumn
+            // 
+            this.rotorLeftDataGridViewTextBoxColumn.DataPropertyName = "RotorLeft";
+            this.rotorLeftDataGridViewTextBoxColumn.HeaderText = "Rotor left";
+            this.rotorLeftDataGridViewTextBoxColumn.Name = "rotorLeftDataGridViewTextBoxColumn";
+            this.rotorLeftDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.rotorLeftDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // rotorMiddleDataGridViewTextBoxColumn
+            // 
+            this.rotorMiddleDataGridViewTextBoxColumn.DataPropertyName = "RotorMiddle";
+            this.rotorMiddleDataGridViewTextBoxColumn.HeaderText = "Rotor middle";
+            this.rotorMiddleDataGridViewTextBoxColumn.Name = "rotorMiddleDataGridViewTextBoxColumn";
+            this.rotorMiddleDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.rotorMiddleDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // rotorRightDataGridViewTextBoxColumn
+            // 
+            this.rotorRightDataGridViewTextBoxColumn.DataPropertyName = "RotorRight";
+            this.rotorRightDataGridViewTextBoxColumn.HeaderText = "Rotor right";
+            this.rotorRightDataGridViewTextBoxColumn.Name = "rotorRightDataGridViewTextBoxColumn";
+            this.rotorRightDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.rotorRightDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // cipherKEYDataGridViewTextBoxColumn
+            // 
+            this.cipherKEYDataGridViewTextBoxColumn.DataPropertyName = "CipherKEY";
+            this.cipherKEYDataGridViewTextBoxColumn.HeaderText = "Cipher KEY";
+            this.cipherKEYDataGridViewTextBoxColumn.Name = "cipherKEYDataGridViewTextBoxColumn";
+            this.cipherKEYDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cipherKEYDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // plugsDataGridViewTextBoxColumn
+            // 
+            this.plugsDataGridViewTextBoxColumn.DataPropertyName = "Plugs";
+            this.plugsDataGridViewTextBoxColumn.HeaderText = "Plugs";
+            this.plugsDataGridViewTextBoxColumn.Name = "plugsDataGridViewTextBoxColumn";
+            // 
+            // messageTextDataGridViewTextBoxColumn
+            // 
+            this.messageTextDataGridViewTextBoxColumn.DataPropertyName = "MessageText";
+            this.messageTextDataGridViewTextBoxColumn.HeaderText = "Message text";
+            this.messageTextDataGridViewTextBoxColumn.Name = "messageTextDataGridViewTextBoxColumn";
+            this.messageTextDataGridViewTextBoxColumn.Width = 285;
+            // 
+            // cipherTextDataGridViewTextBoxColumn
+            // 
+            this.cipherTextDataGridViewTextBoxColumn.DataPropertyName = "CipherText";
+            this.cipherTextDataGridViewTextBoxColumn.HeaderText = "Cipher text";
+            this.cipherTextDataGridViewTextBoxColumn.Name = "cipherTextDataGridViewTextBoxColumn";
+            this.cipherTextDataGridViewTextBoxColumn.Width = 285;
             // 
             // FrmRotorMAndRingM
             // 
@@ -440,19 +441,22 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel TsLabelInfo;
         private System.Windows.Forms.DataGridView DgvDtRotorMAndRingM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.ComponentModel.BackgroundWorker BGWCipher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn refIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iOCDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn refIOCDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iOCDifferenceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reflectorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rotorLeftDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rotorMiddleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rotorRightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cipherKEYDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn plugsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageTextDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cipherTextDataGridViewTextBoxColumn;
     }
 }

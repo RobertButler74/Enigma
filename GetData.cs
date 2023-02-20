@@ -117,6 +117,7 @@ namespace Enigma
             string walzeL = "";
             string walzeM = "";
             string walzeR = "";
+            string ringR = "";
             string cipherKEY = "";
 
             foreach (XmlNode xmlNodes in xmlNodeList)
@@ -156,6 +157,7 @@ namespace Enigma
                         case "RotorRight":
                             {
                                 walzeR = xmlNode.InnerText;
+                                ringR = walzeR.Substring(walzeR.Length - 1);
                                 walzeR = walzeR.Substring(0, walzeR.Length - 2);
                                 break;
                             }
@@ -191,7 +193,8 @@ namespace Enigma
 
                     string newCipherKEY;
                     newCipherKEY = cipherKEY.Replace(cipherKEY.Substring(1), Char.ConvertFromUtf32(intKeyM + 64));
-                    string rings = "A" + Char.ConvertFromUtf32(intRingM + 64) + cipherKEY.Substring(2);
+                    newCipherKEY += cipherKEY[2];
+                    string rings = "A" + Char.ConvertFromUtf32(intRingM + 64) + ringR;
                     EnigmaMachine.EnigmaSetup(ukw, walzen, newCipherKEY, rings);
                 }
             }
