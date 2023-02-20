@@ -282,7 +282,7 @@
             this.DgvDtRotorMAndRingM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvDtRotorMAndRingM.Location = new System.Drawing.Point(0, 25);
             this.DgvDtRotorMAndRingM.Name = "DgvDtRotorMAndRingM";
-            this.DgvDtRotorMAndRingM.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.DgvDtRotorMAndRingM.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DgvDtRotorMAndRingM.Size = new System.Drawing.Size(1143, 598);
             this.DgvDtRotorMAndRingM.TabIndex = 1;
             // 
