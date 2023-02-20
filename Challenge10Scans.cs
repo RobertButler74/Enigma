@@ -26,6 +26,9 @@ namespace Enigma
 
             Cipher.blIoCDiff = true;
 
+            GetData.GetDataXmlFile = "RotorsAndKEY.xml";
+            GetData.GetDataTableName = "dtRotorsAndKEY";
+
             GetData.GetDataRotorRAndRingR();
         }
 

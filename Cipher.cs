@@ -59,6 +59,7 @@ namespace Enigma
 
             if (blIoCDiff)
             {
+                IoCDiff = 0;
                 IoCDiff = intIoC - intRefIoC;
             }
 
@@ -76,7 +77,7 @@ namespace Enigma
             */
             if (blIoCDiff)
             {
-                Thread.Sleep(25);
+                Thread.Sleep(250);
             }
         }
     }

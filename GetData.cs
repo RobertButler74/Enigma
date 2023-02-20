@@ -33,9 +33,15 @@ namespace Enigma
                 {
                     switch(xmlNode.Name)
                     {
-                        case "IoC":
+
+                        case "ID":
                             {
-                                IoC = Convert.ToInt32(xmlNode.InnerText);
+                                Cipher.intRefID = Convert.ToInt32(xmlNode.InnerText);
+                                break;
+                            }
+                        case "IOC":
+                            {
+                                Cipher.intRefIoC = Convert.ToInt32(xmlNode.InnerText);
                                 break;
                             }
                         case "Reflector":
@@ -68,36 +74,35 @@ namespace Enigma
                             }
                     }
                 }
-            }
 
-            Cipher.minIoC = IoC + 1;
-            int walzen = Rotors.RomanToNum(walzeL) * 100;
-            walzen += Rotors.RomanToNum(walzeM) * 10;
-            walzen += Rotors.RomanToNum(walzeR);
+                Cipher.minIoC = IoC + 1;
+                int walzen = Rotors.RomanToNum(walzeL) * 100;
+                walzen += Rotors.RomanToNum(walzeM) * 10;
+                walzen += Rotors.RomanToNum(walzeR);
 
-            int intKeyR;
-            int intRingR;
-            int index;
-            
-            for (index = 1; index <= 25; index++)
-            {
-                char chrKeyR = Convert.ToChar(cipherKEY.Substring(2, 1));
-                intKeyR = Convert.ToInt32(chrKeyR) - 64;
-                intRingR = 1;
-                intKeyR += index;
-                intRingR += index;
+                int intKeyR;
+                int intRingR;
+                int index;
 
-                if (intKeyR > 26)
-                    intKeyR -= 26;
-                if (intRingR > 26)
-                    intRingR -= 26;
+                for (index = 1; index <= 25; index++)
+                {
+                    char chrKeyR = Convert.ToChar(cipherKEY.Substring(2, 1));
+                    intKeyR = Convert.ToInt32(chrKeyR) - 64;
+                    intRingR = 1;
+                    intKeyR += index;
+                    intRingR += index;
 
-                string newCipherKEY;
-                newCipherKEY = cipherKEY.Replace(cipherKEY.Substring(2), Char.ConvertFromUtf32(intKeyR + 64));
-                string rings = "AA" + Char.ConvertFromUtf32(intRingR + 64);
-                EnigmaMachine.EnigmaSetup(ukw, walzen, newCipherKEY, rings);
-            }
+                    if (intKeyR > 26)
+                        intKeyR -= 26;
+                    if (intRingR > 26)
+                        intRingR -= 26;
+
+                    string newCipherKEY;
+                    newCipherKEY = cipherKEY.Replace(cipherKEY.Substring(2), Char.ConvertFromUtf32(intKeyR + 64));
+                    string rings = "AA" + Char.ConvertFromUtf32(intRingR + 64);
+                    EnigmaMachine.EnigmaSetup(ukw, walzen, newCipherKEY, rings);
+                }
+            }            
         }
-
     }
 }

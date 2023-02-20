@@ -47,7 +47,7 @@ namespace Enigma
             }
             else if (RbtnRotorRAndRingR.Checked)
             {
-                //frmTemp = new FrmRotorRAndRingR();
+                frmTemp = new FrmRotorRAndRingR();
             }
             else if (RbtnRotorMAndRingM.Checked)
             {
