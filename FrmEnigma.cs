@@ -45,16 +45,19 @@ namespace Enigma
             {
                 frmTemp = new FrmRotorsAndKEY();
                 FrmRotorsAndKEY.ownerGBX = GbxScanSelection;
+                Cipher.scanNumber = 1;
             }
             else if (RbtnRotorRAndRingR.Checked)
             {
                 frmTemp = new FrmRotorRAndRingR();
                 FrmRotorRAndRingR.ownerGBX = GbxScanSelection;
+                Cipher.scanNumber = 2;
             }
             else if (RbtnRotorMAndRingM.Checked)
             {
                 frmTemp = new FrmRotorMAndRingM();
                 FrmRotorMAndRingM.ownerGBX = GbxScanSelection;
+                Cipher.scanNumber = 3;
             }
             else if (RbtnKEYs.Checked)
             {

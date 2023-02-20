@@ -65,7 +65,8 @@ namespace Enigma
                 TsBtnStartScan.Tag = "Stop";
                 TsBtnStartScan.Enabled = false;
                 TsBtnExitScan.Enabled = false;
-                BGWCipher.RunWorkerAsync();
+
+                Challenge10Scans.RotorRAndRingR();
             }
         }
 
@@ -131,14 +132,11 @@ namespace Enigma
 
         private void BGWCipher_DoWork(object sender, DoWorkEventArgs e)
         {
-            Cipher.BGWCipher = BGWCipher;
-            Challenge10Scans.RotorRAndRingR();
+            
         }
 
-        private void BGWCipher_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        public void ProgressChanged(string infoText)
         {
-            string infoText = e.UserState.ToString();
-
             if (infoText.Substring(0, 3) == "dgv")
             {
                 infoText = infoText.Substring(3);

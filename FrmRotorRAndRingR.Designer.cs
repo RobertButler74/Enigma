@@ -41,7 +41,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.TsLabelInfo = new System.Windows.Forms.ToolStripLabel();
             this.DgvDtRotorRAndRingR = new System.Windows.Forms.DataGridView();
-            this.BGWCipher = new System.ComponentModel.BackgroundWorker();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.TsBtnStartScan = new System.Windows.Forms.ToolStripButton();
@@ -51,8 +50,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.dtRotorRAndRingRBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.TsBtnExitScan = new System.Windows.Forms.ToolStripButton();
-            this.dtRotorRAndRingRBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsEnigmaChallenges = new Enigma.DsEnigmaChallenges();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.refIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +63,8 @@
             this.plugsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.messageTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cipherTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtRotorRAndRingRBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsEnigmaChallenges = new Enigma.DsEnigmaChallenges();
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorRAndRingRBindingNavigator)).BeginInit();
             this.dtRotorRAndRingRBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvDtRotorRAndRingR)).BeginInit();
@@ -188,14 +187,6 @@
             this.DgvDtRotorRAndRingR.Size = new System.Drawing.Size(1143, 598);
             this.DgvDtRotorRAndRingR.TabIndex = 1;
             // 
-            // BGWCipher
-            // 
-            this.BGWCipher.WorkerReportsProgress = true;
-            this.BGWCipher.WorkerSupportsCancellation = true;
-            this.BGWCipher.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BGWCipher_DoWork);
-            this.BGWCipher.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BGWCipher_ProgressChanged);
-            this.BGWCipher.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BGWCipher_RunWorkerCompleted);
-            // 
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -284,16 +275,6 @@
             this.TsBtnExitScan.Text = "Exit";
             this.TsBtnExitScan.ToolTipText = "Exit scan";
             this.TsBtnExitScan.Click += new System.EventHandler(this.TsBtnExitScan_Click);
-            // 
-            // dtRotorRAndRingRBindingSource
-            // 
-            this.dtRotorRAndRingRBindingSource.DataMember = "dtRotorRAndRingR";
-            this.dtRotorRAndRingRBindingSource.DataSource = this.dsEnigmaChallenges;
-            // 
-            // dsEnigmaChallenges
-            // 
-            this.dsEnigmaChallenges.DataSetName = "DsEnigmaChallenges";
-            this.dsEnigmaChallenges.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -395,6 +376,16 @@
             this.cipherTextDataGridViewTextBoxColumn.Name = "cipherTextDataGridViewTextBoxColumn";
             this.cipherTextDataGridViewTextBoxColumn.Width = 285;
             // 
+            // dtRotorRAndRingRBindingSource
+            // 
+            this.dtRotorRAndRingRBindingSource.DataMember = "dtRotorRAndRingR";
+            this.dtRotorRAndRingRBindingSource.DataSource = this.dsEnigmaChallenges;
+            // 
+            // dsEnigmaChallenges
+            // 
+            this.dsEnigmaChallenges.DataSetName = "DsEnigmaChallenges";
+            this.dsEnigmaChallenges.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // FrmRotorRAndRingR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,7 +436,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.ComponentModel.BackgroundWorker BGWCipher;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn refIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iOCDataGridViewTextBoxColumn;

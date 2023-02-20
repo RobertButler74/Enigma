@@ -52,7 +52,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.TsLabelInfo = new System.Windows.Forms.ToolStripLabel();
             this.DgvDtRotorMAndRingM = new System.Windows.Forms.DataGridView();
-            this.BGWCipher = new System.ComponentModel.BackgroundWorker();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.refIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -286,14 +285,6 @@
             this.DgvDtRotorMAndRingM.Size = new System.Drawing.Size(1143, 598);
             this.DgvDtRotorMAndRingM.TabIndex = 1;
             // 
-            // BGWCipher
-            // 
-            this.BGWCipher.WorkerReportsProgress = true;
-            this.BGWCipher.WorkerSupportsCancellation = true;
-            this.BGWCipher.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BGWCipher_DoWork);
-            this.BGWCipher.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BGWCipher_ProgressChanged);
-            this.BGWCipher.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BGWCipher_RunWorkerCompleted);
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -444,7 +435,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.ComponentModel.BackgroundWorker BGWCipher;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn refIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iOCDataGridViewTextBoxColumn;
