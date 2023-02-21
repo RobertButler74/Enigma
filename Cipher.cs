@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -10,6 +11,8 @@ namespace Enigma
 {
     internal class Cipher
     {
+
+        public static BackgroundWorker BGWCipher;
 
         public static string messageText;
         public static string cipherText;
@@ -54,7 +57,8 @@ namespace Enigma
 
             string dataInfo = SetData.SetDataInfo(enigmaMachine);
 
-            ReportProgress(dataInfo);
+            BGWCipher.ReportProgress(0, dataInfo);
+            //Debug.WriteLine(dataInfo.Substring(3));
 
             double IoC = Analyzation.MonogramIOC(cipherText);
             IoC = Math.Round(IoC, 5);
@@ -69,8 +73,8 @@ namespace Enigma
             if ((!blIoCDiff && intIoC >= minIoC && !blCompare) || (blIoCDiff && IoCDiff > 0 && !blCompare) || (blCompare && cipherText == compare))
             {
                 dataInfo = SetData.SetDataInfo(enigmaMachine, messageText,cipherText, true);
-                ReportProgress(dataInfo);
-                //Thread.Sleep(50);
+                BGWCipher.ReportProgress(0, dataInfo);                
+                Thread.Sleep(50);
             }
 
             /*
@@ -78,30 +82,10 @@ namespace Enigma
             negative, even though I just wanted them to be bigger then 0.
             This slowed the program down immensely. The 1st scan, went form 1 hour to 8 hours
             */
-            //if (blIoCDiff)
-            //{
-            //    Thread.Sleep(250);
-            //}
-        }
-
-        private void ReportProgress(string dataInfo)
-        {
-            if (scanNumber == 1)
+            if (blIoCDiff)
             {
-                FrmRotorsAndKEY frmTemp = new FrmRotorsAndKEY();
-                frmTemp.ProgressChanged(dataInfo);
+                Thread.Sleep(250);
             }
-            else if (scanNumber == 2)
-            {
-                FrmRotorRAndRingR frmTemp = new FrmRotorRAndRingR();
-                frmTemp.ProgressChanged(dataInfo);
-            }
-            else if (scanNumber == 3)
-            {
-                FrmRotorMAndRingM frmTemp = new FrmRotorMAndRingM();
-                frmTemp.ProgressChanged(dataInfo);
-            }
-        }
-
+        }       
     }
 }

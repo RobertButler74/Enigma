@@ -62,6 +62,7 @@
             this.plugsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.messageTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cipherTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BGWCipher = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dsEnigmaChallenges)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorsAndKEYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorsAndKEYBindingNavigator)).BeginInit();
@@ -356,6 +357,14 @@
             this.cipherTextDataGridViewTextBoxColumn.Name = "cipherTextDataGridViewTextBoxColumn";
             this.cipherTextDataGridViewTextBoxColumn.Width = 345;
             // 
+            // BGWCipher
+            // 
+            this.BGWCipher.WorkerReportsProgress = true;
+            this.BGWCipher.WorkerSupportsCancellation = true;
+            this.BGWCipher.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BGWCipher_DoWork);
+            this.BGWCipher.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BGWCipher_ProgressChanged);
+            this.BGWCipher.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BGWCipher_RunWorkerCompleted);
+            // 
             // FrmRotorsAndKEY
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,5 +422,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn plugsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn messageTextDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cipherTextDataGridViewTextBoxColumn;
+        private System.ComponentModel.BackgroundWorker BGWCipher;
     }
 }

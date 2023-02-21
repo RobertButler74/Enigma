@@ -64,8 +64,8 @@ namespace Enigma
                 TsBtnStartScan.Image = Resources.power_green;
                 TsBtnStartScan.Tag = "Stop";
                 TsBtnStartScan.Enabled = false;
-                TsBtnExitScan.Enabled = false;
-                Challenge10Scans.RotorsAndKEY();
+                TsBtnExitScan.Enabled = false;                
+                BGWCipher.RunWorkerAsync();
             }
         }
 
@@ -100,7 +100,7 @@ namespace Enigma
                 dtRotorsAndKEYBindingNavigator.Refresh();
                 dtRotorsAndKEYBindingNavigator.Update();
 
-                Thread.Sleep(5000);
+                Thread.Sleep(1500);
                 TsLabelInfo.ForeColor = Color.Black;
                 TsLabelInfo.Text = "";
                 dtRotorsAndKEYBindingNavigator.Refresh();
@@ -115,7 +115,7 @@ namespace Enigma
                 dtRotorsAndKEYBindingNavigator.Refresh();
                 dtRotorsAndKEYBindingNavigator.Update();
 
-                Thread.Sleep(5000);
+                Thread.Sleep(1500);
                 TsLabelInfo.ForeColor = Color.Black;
                 TsLabelInfo.Text = "";
                 dtRotorsAndKEYBindingNavigator.Refresh();
@@ -131,12 +131,13 @@ namespace Enigma
 
         private void BGWCipher_DoWork(object sender, DoWorkEventArgs e)
         {
-            
+            Cipher.BGWCipher = BGWCipher;
+            Challenge10Scans.RotorsAndKEY();
         }
 
-        public void ProgressChanged(string infoText)
+        private void BGWCipher_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-
+            string infoText = e.UserState.ToString();
             if (infoText.Substring(0, 3) == "dgv")
             {
                 infoText = infoText.Substring(3);
@@ -146,7 +147,7 @@ namespace Enigma
             {
                 infoText = infoText.Substring(3);
                 TsLabelInfo.Font = new Font("FreeMono", 10, FontStyle.Bold);
-                TsLabelInfo.Text = infoText;
+                TsLabelInfo.Text = infoText;                
             }
         }
 
@@ -170,13 +171,13 @@ namespace Enigma
             myDataRow["CipherText"] = infoList[7];
 
             this.dsEnigmaChallenges.Tables[0].Rows.Add(myDataRow);
-            dtRotorsAndKEYBindingNavigatorSaveItem.Enabled = true;
+            dtRotorsAndKEYBindingNavigatorSaveItem.Enabled = true;            
         }
 
         private void BGWCipher_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             TsBtnStartScan.Enabled = true;
             TsBtnExitScan.Enabled = true;
-        }
+        }        
     }
 }

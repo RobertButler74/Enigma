@@ -31,25 +31,27 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRotorRAndRingR));
             this.dtRotorRAndRingRBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.dtRotorRAndRingRBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsEnigmaChallenges = new Enigma.DsEnigmaChallenges();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.TsBtnStartScan = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.dtRotorRAndRingRBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.TsBtnExitScan = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.TsLabelInfo = new System.Windows.Forms.ToolStripLabel();
             this.DgvDtRotorRAndRingR = new System.Windows.Forms.DataGridView();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.TsBtnStartScan = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.dtRotorRAndRingRBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.TsBtnExitScan = new System.Windows.Forms.ToolStripButton();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.refIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,13 +65,12 @@
             this.plugsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.messageTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cipherTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtRotorRAndRingRBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsEnigmaChallenges = new Enigma.DsEnigmaChallenges();
+            this.BGWCipher = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorRAndRingRBindingNavigator)).BeginInit();
             this.dtRotorRAndRingRBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvDtRotorRAndRingR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorRAndRingRBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEnigmaChallenges)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvDtRotorRAndRingR)).BeginInit();
             this.SuspendLayout();
             // 
             // dtRotorRAndRingRBindingNavigator
@@ -108,6 +109,25 @@
             this.dtRotorRAndRingRBindingNavigator.TabIndex = 0;
             this.dtRotorRAndRingRBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // dtRotorRAndRingRBindingSource
+            // 
+            this.dtRotorRAndRingRBindingSource.DataMember = "dtRotorRAndRingR";
+            this.dtRotorRAndRingRBindingSource.DataSource = this.dsEnigmaChallenges;
+            // 
+            // dsEnigmaChallenges
+            // 
+            this.dsEnigmaChallenges.DataSetName = "DsEnigmaChallenges";
+            this.dsEnigmaChallenges.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -115,10 +135,50 @@
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // TsBtnStartScan
+            // 
+            this.TsBtnStartScan.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TsBtnStartScan.Image = global::Enigma.Properties.Resources.power_grey;
+            this.TsBtnStartScan.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsBtnStartScan.Name = "TsBtnStartScan";
+            this.TsBtnStartScan.Size = new System.Drawing.Size(23, 22);
+            this.TsBtnStartScan.Tag = "Start";
+            this.TsBtnStartScan.ToolTipText = "Start scan";
+            this.TsBtnStartScan.Click += new System.EventHandler(this.TsBtnStartScan_Click);
+            this.TsBtnStartScan.MouseEnter += new System.EventHandler(this.TsBtnStartScan_MouseEnter);
+            this.TsBtnStartScan.MouseLeave += new System.EventHandler(this.TsBtnStartScan_MouseLeave);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
@@ -140,15 +200,55 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // dtRotorRAndRingRBindingNavigatorSaveItem
+            // 
+            this.dtRotorRAndRingRBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtRotorRAndRingRBindingNavigatorSaveItem.Enabled = false;
+            this.dtRotorRAndRingRBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("dtRotorRAndRingRBindingNavigatorSaveItem.Image")));
+            this.dtRotorRAndRingRBindingNavigatorSaveItem.Name = "dtRotorRAndRingRBindingNavigatorSaveItem";
+            this.dtRotorRAndRingRBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.dtRotorRAndRingRBindingNavigatorSaveItem.Text = "Save Data";
+            this.dtRotorRAndRingRBindingNavigatorSaveItem.Click += new System.EventHandler(this.DtRotorRAndRingRBindingNavigatorSaveItem_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // TsBtnExitScan
+            // 
+            this.TsBtnExitScan.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.TsBtnExitScan.ForeColor = System.Drawing.Color.Red;
+            this.TsBtnExitScan.Image = ((System.Drawing.Image)(resources.GetObject("TsBtnExitScan.Image")));
+            this.TsBtnExitScan.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsBtnExitScan.Name = "TsBtnExitScan";
+            this.TsBtnExitScan.Size = new System.Drawing.Size(30, 22);
+            this.TsBtnExitScan.Text = "Exit";
+            this.TsBtnExitScan.ToolTipText = "Exit scan";
+            this.TsBtnExitScan.Click += new System.EventHandler(this.TsBtnExitScan_Click);
             // 
             // toolStripSeparator3
             // 
@@ -186,95 +286,6 @@
             this.DgvDtRotorRAndRingR.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DgvDtRotorRAndRingR.Size = new System.Drawing.Size(1143, 598);
             this.DgvDtRotorRAndRingR.TabIndex = 1;
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // TsBtnStartScan
-            // 
-            this.TsBtnStartScan.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.TsBtnStartScan.Image = global::Enigma.Properties.Resources.power_grey;
-            this.TsBtnStartScan.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TsBtnStartScan.Name = "TsBtnStartScan";
-            this.TsBtnStartScan.Size = new System.Drawing.Size(23, 22);
-            this.TsBtnStartScan.Tag = "Start";
-            this.TsBtnStartScan.ToolTipText = "Start scan";
-            this.TsBtnStartScan.Click += new System.EventHandler(this.TsBtnStartScan_Click);
-            this.TsBtnStartScan.MouseEnter += new System.EventHandler(this.TsBtnStartScan_MouseEnter);
-            this.TsBtnStartScan.MouseLeave += new System.EventHandler(this.TsBtnStartScan_MouseLeave);
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // dtRotorRAndRingRBindingNavigatorSaveItem
-            // 
-            this.dtRotorRAndRingRBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.dtRotorRAndRingRBindingNavigatorSaveItem.Enabled = false;
-            this.dtRotorRAndRingRBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("dtRotorRAndRingRBindingNavigatorSaveItem.Image")));
-            this.dtRotorRAndRingRBindingNavigatorSaveItem.Name = "dtRotorRAndRingRBindingNavigatorSaveItem";
-            this.dtRotorRAndRingRBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.dtRotorRAndRingRBindingNavigatorSaveItem.Text = "Save Data";
-            this.dtRotorRAndRingRBindingNavigatorSaveItem.Click += new System.EventHandler(this.DtRotorRAndRingRBindingNavigatorSaveItem_Click);
-            // 
-            // TsBtnExitScan
-            // 
-            this.TsBtnExitScan.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.TsBtnExitScan.ForeColor = System.Drawing.Color.Red;
-            this.TsBtnExitScan.Image = ((System.Drawing.Image)(resources.GetObject("TsBtnExitScan.Image")));
-            this.TsBtnExitScan.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TsBtnExitScan.Name = "TsBtnExitScan";
-            this.TsBtnExitScan.Size = new System.Drawing.Size(30, 22);
-            this.TsBtnExitScan.Text = "Exit";
-            this.TsBtnExitScan.ToolTipText = "Exit scan";
-            this.TsBtnExitScan.Click += new System.EventHandler(this.TsBtnExitScan_Click);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -376,15 +387,13 @@
             this.cipherTextDataGridViewTextBoxColumn.Name = "cipherTextDataGridViewTextBoxColumn";
             this.cipherTextDataGridViewTextBoxColumn.Width = 285;
             // 
-            // dtRotorRAndRingRBindingSource
+            // BGWCipher
             // 
-            this.dtRotorRAndRingRBindingSource.DataMember = "dtRotorRAndRingR";
-            this.dtRotorRAndRingRBindingSource.DataSource = this.dsEnigmaChallenges;
-            // 
-            // dsEnigmaChallenges
-            // 
-            this.dsEnigmaChallenges.DataSetName = "DsEnigmaChallenges";
-            this.dsEnigmaChallenges.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.BGWCipher.WorkerReportsProgress = true;
+            this.BGWCipher.WorkerSupportsCancellation = true;
+            this.BGWCipher.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BGWCipher_DoWork);
+            this.BGWCipher.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BGWCipher_ProgressChanged);
+            this.BGWCipher.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BGWCipher_RunWorkerCompleted);
             // 
             // FrmRotorRAndRingR
             // 
@@ -401,9 +410,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorRAndRingRBindingNavigator)).EndInit();
             this.dtRotorRAndRingRBindingNavigator.ResumeLayout(false);
             this.dtRotorRAndRingRBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvDtRotorRAndRingR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRotorRAndRingRBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEnigmaChallenges)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvDtRotorRAndRingR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,5 +458,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn plugsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn messageTextDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cipherTextDataGridViewTextBoxColumn;
+        private System.ComponentModel.BackgroundWorker BGWCipher;
     }
 }

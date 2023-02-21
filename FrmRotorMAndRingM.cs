@@ -65,7 +65,7 @@ namespace Enigma
                 TsBtnStartScan.Tag = "Stop";
                 TsBtnStartScan.Enabled = false;
                 TsBtnExitScan.Enabled = false;
-                Challenge10Scans.RotorMAndRingM();
+                BGWCipher.RunWorkerAsync();
             }
         }
 
@@ -100,7 +100,7 @@ namespace Enigma
                 dtRotorMAndRingMBindingNavigator.Refresh();
                 dtRotorMAndRingMBindingNavigator.Update();
 
-                Thread.Sleep(5000);
+                Thread.Sleep(1500);
                 TsLabelInfo.ForeColor = Color.Black;
                 TsLabelInfo.Text = "";
                 dtRotorMAndRingMBindingNavigator.Refresh();
@@ -115,7 +115,7 @@ namespace Enigma
                 dtRotorMAndRingMBindingNavigator.Refresh();
                 dtRotorMAndRingMBindingNavigator.Update();
 
-                Thread.Sleep(5000);
+                Thread.Sleep(1500);
                 TsLabelInfo.ForeColor = Color.Black;
                 TsLabelInfo.Text = "";
                 dtRotorMAndRingMBindingNavigator.Refresh();
@@ -131,12 +131,13 @@ namespace Enigma
 
         private void BGWCipher_DoWork(object sender, DoWorkEventArgs e)
         {
-            
+            Cipher.BGWCipher = BGWCipher;
+            Challenge10Scans.RotorMAndRingM();
         }
 
-        public void ProgressChanged(string infoText)
+        private void BGWCipher_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-
+            string infoText = e.UserState.ToString();
             if (infoText.Substring(0, 3) == "dgv")
             {
                 infoText = infoText.Substring(3);
@@ -149,7 +150,7 @@ namespace Enigma
                 TsLabelInfo.Text = infoText;
             }
         }
-
+       
         private void CreateDataGridViewDATA(string infoText)
         {
             string[] infoList = infoText.Split('|');
@@ -180,6 +181,6 @@ namespace Enigma
         {
             TsBtnStartScan.Enabled = true;
             TsBtnExitScan.Enabled = true;
-        }
+        }        
     }
 }
