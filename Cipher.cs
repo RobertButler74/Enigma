@@ -28,8 +28,6 @@ namespace Enigma
         public static int intIoC;
         public static int IoCDiff;
 
-        public static int scanNumber = 0;
-
         public Cipher()
         {
 
@@ -64,9 +62,10 @@ namespace Enigma
             IoC = Math.Round(IoC, 5);
             intIoC = Convert.ToInt32(IoC * 100000);
 
-            if (blIoCDiff)
-            {
-                IoCDiff = 0;
+            IoCDiff = 0;
+
+            if (blIoCDiff && intIoC > intRefIoC)
+            {                
                 IoCDiff = intIoC - intRefIoC;
             }
 

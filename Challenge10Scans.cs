@@ -44,5 +44,10 @@ namespace Enigma
             GetData.GetDataRotorMAndRingM();
         }
 
+        public static void Plugs()
+        {
+
+        }
+
     }
 }
