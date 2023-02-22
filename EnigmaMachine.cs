@@ -14,16 +14,16 @@ namespace Enigma
         public static string[] plugs = new string[11];
         public static int counter = 0;
 
-        public static void SetPlugs(int fromPlug, int toPlug)
+        public static void SetPlugs(int fromPlug, int toPlug, int ukw, int walzen, string cipherKEY, string rings)
         {
             int index;
             for (index = fromPlug; index <= toPlug; index++)
-                SetPlug(index, toPlug);
+                SetPlug(index,ukw, walzen, cipherKEY, rings, toPlug);
 
             Array.Clear(plugs, 0, plugs.Length);
         }
 
-        public static void SetPlug(int plugNumber, int maxPlugs = 10, int indexPlugStart = 0)
+        public static void SetPlug(int plugNumber, int ukw, int walzen, string cipherKEY, string rings, int maxPlugs = 10, int indexPlugStart = 0)
         {
             int index;
             int indexPlugNumber;
@@ -58,24 +58,26 @@ namespace Enigma
                     if (plugNumber + 1 < maxPlugs + 1)
                     {
                         plugNumber += 1;
-                        SetPlug(plugNumber, maxPlugs, index + 1);
+                        SetPlug(plugNumber, ukw, walzen, cipherKEY, rings, maxPlugs, index + 1);
                         plugNumber = origPlug;
                     }
                     if (plugNumber == maxPlugs)
                     {
-                        counter += 1;
-                        string strCounter = counter.ToString("# ###");
-                        strCounter = "Count: " + strCounter;
-                        string msg = "Plugs: ";
-                        for (int indexPlugs = 1; indexPlugs <= maxPlugs; indexPlugs++)
-                        {
-                            msg += plugs[indexPlugs];
-                            msg += "-";
-                        }
-                        msg = msg.Substring(0, msg.Length - 1);
-                        Debug.WriteLine(strCounter);
-                        Debug.WriteLine(msg);
-                        Debug.WriteLine("");
+                        EnigmaMachine.EnigmaSetup(ukw, walzen, cipherKEY, rings);
+
+                        //counter += 1;
+                        //string strCounter = counter.ToString("# ###");
+                        //strCounter = "Count: " + strCounter;
+                        //string msg = "Plugs: ";
+                        //for (int indexPlugs = 1; indexPlugs <= maxPlugs; indexPlugs++)
+                        //{
+                        //    msg += plugs[indexPlugs];
+                        //    msg += "-";
+                        //}
+                        //msg = msg.Substring(0, msg.Length - 1);
+                        //Debug.WriteLine(strCounter);
+                        //Debug.WriteLine(msg);
+                        //Debug.WriteLine("");
                     }
                 }
             }

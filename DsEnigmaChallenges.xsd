@@ -82,22 +82,22 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dtPlug1" msprop:Generator_RowEvHandlerName="dtPlug1RowChangeEventHandler" msprop:Generator_RowDeletedName="dtPlug1RowDeleted" msprop:Generator_RowDeletingName="dtPlug1RowDeleting" msprop:Generator_RowEvArgName="dtPlug1RowChangeEvent" msprop:Generator_TablePropName="dtPlug1" msprop:Generator_RowChangedName="dtPlug1RowChanged" msprop:Generator_RowChangingName="dtPlug1RowChanging" msprop:Generator_TableClassName="dtPlug1DataTable" msprop:Generator_RowClassName="dtPlug1Row" msprop:Generator_TableVarName="tabledtPlug1" msprop:Generator_UserTableName="dtPlug1">
+        <xs:element name="dtPlugs" msprop:Generator_RowClassName="dtPlugsRow" msprop:Generator_RowEvHandlerName="dtPlugsRowChangeEventHandler" msprop:Generator_RowDeletedName="dtPlugsRowDeleted" msprop:Generator_RowDeletingName="dtPlugsRowDeleting" msprop:Generator_RowEvArgName="dtPlugsRowChangeEvent" msprop:Generator_TablePropName="dtPlugs" msprop:Generator_RowChangedName="dtPlugsRowChanged" msprop:Generator_UserTableName="dtPlugs" msprop:Generator_RowChangingName="dtPlugsRowChanging" msprop:Generator_TableClassName="dtPlugsDataTable" msprop:Generator_TableVarName="tabledtPlugs">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="ref_ID" msprop:Generator_ColumnPropNameInRow="ref_ID" msprop:Generator_ColumnPropNameInTable="ref_IDColumn" msprop:Generator_ColumnVarNameInTable="columnref_ID" msprop:Generator_UserColumnName="ref_ID" type="xs:string" />
-              <xs:element name="IOC" msprop:Generator_ColumnPropNameInRow="IOC" msprop:Generator_ColumnPropNameInTable="IOCColumn" msprop:Generator_ColumnVarNameInTable="columnIOC" msprop:Generator_UserColumnName="IOC" type="xs:int" minOccurs="0" />
-              <xs:element name="ref_IOC" msprop:Generator_ColumnPropNameInRow="ref_IOC" msprop:Generator_ColumnPropNameInTable="ref_IOCColumn" msprop:Generator_ColumnVarNameInTable="columnref_IOC" msprop:Generator_UserColumnName="ref_IOC" type="xs:int" minOccurs="0" />
-              <xs:element name="IOCDifference" msprop:Generator_ColumnPropNameInRow="IOCDifference" msprop:Generator_ColumnPropNameInTable="IOCDifferenceColumn" msprop:Generator_ColumnVarNameInTable="columnIOCDifference" msprop:Generator_UserColumnName="IOCDifference" type="xs:int" minOccurs="0" />
-              <xs:element name="Reflector" msprop:Generator_ColumnPropNameInRow="Reflector" msprop:Generator_ColumnPropNameInTable="ReflectorColumn" msprop:Generator_ColumnVarNameInTable="columnReflector" msprop:Generator_UserColumnName="Reflector" type="xs:string" minOccurs="0" />
-              <xs:element name="RotorLeft" msprop:Generator_ColumnPropNameInRow="RotorLeft" msprop:Generator_ColumnPropNameInTable="RotorLeftColumn" msprop:Generator_ColumnVarNameInTable="columnRotorLeft" msprop:Generator_UserColumnName="RotorLeft" type="xs:string" minOccurs="0" />
-              <xs:element name="RotorMiddle" msprop:Generator_ColumnPropNameInRow="RotorMiddle" msprop:Generator_ColumnPropNameInTable="RotorMiddleColumn" msprop:Generator_ColumnVarNameInTable="columnRotorMiddle" msprop:Generator_UserColumnName="RotorMiddle" type="xs:string" minOccurs="0" />
-              <xs:element name="RotorRight" msprop:Generator_ColumnPropNameInRow="RotorRight" msprop:Generator_ColumnPropNameInTable="RotorRightColumn" msprop:Generator_ColumnVarNameInTable="columnRotorRight" msprop:Generator_UserColumnName="RotorRight" type="xs:string" minOccurs="0" />
-              <xs:element name="CipherKEY" msprop:Generator_ColumnPropNameInRow="CipherKEY" msprop:Generator_ColumnPropNameInTable="CipherKEYColumn" msprop:Generator_ColumnVarNameInTable="columnCipherKEY" msprop:Generator_UserColumnName="CipherKEY" type="xs:string" minOccurs="0" />
-              <xs:element name="Plugs" msprop:Generator_ColumnPropNameInRow="Plugs" msprop:Generator_ColumnPropNameInTable="PlugsColumn" msprop:Generator_ColumnVarNameInTable="columnPlugs" msprop:Generator_UserColumnName="Plugs" type="xs:string" minOccurs="0" />
-              <xs:element name="MessageText" msprop:Generator_ColumnPropNameInRow="MessageText" msprop:Generator_ColumnPropNameInTable="MessageTextColumn" msprop:Generator_ColumnVarNameInTable="columnMessageText" msprop:Generator_UserColumnName="MessageText" type="xs:string" minOccurs="0" />
-              <xs:element name="CipherText" msprop:Generator_ColumnPropNameInRow="CipherText" msprop:Generator_ColumnPropNameInTable="CipherTextColumn" msprop:Generator_ColumnVarNameInTable="columnCipherText" msprop:Generator_UserColumnName="CipherText" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="ref_ID" msprop:Generator_UserColumnName="ref_ID" msprop:Generator_ColumnPropNameInTable="ref_IDColumn" msprop:Generator_ColumnPropNameInRow="ref_ID" msprop:Generator_ColumnVarNameInTable="columnref_ID" type="xs:string" />
+              <xs:element name="IOC" msprop:Generator_UserColumnName="IOC" msprop:Generator_ColumnPropNameInTable="IOCColumn" msprop:Generator_ColumnPropNameInRow="IOC" msprop:Generator_ColumnVarNameInTable="columnIOC" type="xs:int" minOccurs="0" />
+              <xs:element name="ref_IOC" msprop:Generator_UserColumnName="ref_IOC" msprop:Generator_ColumnPropNameInTable="ref_IOCColumn" msprop:Generator_ColumnPropNameInRow="ref_IOC" msprop:Generator_ColumnVarNameInTable="columnref_IOC" type="xs:int" minOccurs="0" />
+              <xs:element name="IOCDifference" msprop:Generator_UserColumnName="IOCDifference" msprop:Generator_ColumnPropNameInTable="IOCDifferenceColumn" msprop:Generator_ColumnPropNameInRow="IOCDifference" msprop:Generator_ColumnVarNameInTable="columnIOCDifference" type="xs:int" minOccurs="0" />
+              <xs:element name="Reflector" msprop:Generator_UserColumnName="Reflector" msprop:Generator_ColumnPropNameInTable="ReflectorColumn" msprop:Generator_ColumnPropNameInRow="Reflector" msprop:Generator_ColumnVarNameInTable="columnReflector" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorLeft" msprop:Generator_UserColumnName="RotorLeft" msprop:Generator_ColumnPropNameInTable="RotorLeftColumn" msprop:Generator_ColumnPropNameInRow="RotorLeft" msprop:Generator_ColumnVarNameInTable="columnRotorLeft" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorMiddle" msprop:Generator_UserColumnName="RotorMiddle" msprop:Generator_ColumnPropNameInTable="RotorMiddleColumn" msprop:Generator_ColumnPropNameInRow="RotorMiddle" msprop:Generator_ColumnVarNameInTable="columnRotorMiddle" type="xs:string" minOccurs="0" />
+              <xs:element name="RotorRight" msprop:Generator_UserColumnName="RotorRight" msprop:Generator_ColumnPropNameInTable="RotorRightColumn" msprop:Generator_ColumnPropNameInRow="RotorRight" msprop:Generator_ColumnVarNameInTable="columnRotorRight" type="xs:string" minOccurs="0" />
+              <xs:element name="CipherKEY" msprop:Generator_UserColumnName="CipherKEY" msprop:Generator_ColumnPropNameInTable="CipherKEYColumn" msprop:Generator_ColumnPropNameInRow="CipherKEY" msprop:Generator_ColumnVarNameInTable="columnCipherKEY" type="xs:string" minOccurs="0" />
+              <xs:element name="Plugs" msprop:Generator_UserColumnName="Plugs" msprop:Generator_ColumnPropNameInTable="PlugsColumn" msprop:Generator_ColumnPropNameInRow="Plugs" msprop:Generator_ColumnVarNameInTable="columnPlugs" type="xs:string" minOccurs="0" />
+              <xs:element name="MessageText" msprop:Generator_UserColumnName="MessageText" msprop:Generator_ColumnPropNameInTable="MessageTextColumn" msprop:Generator_ColumnPropNameInRow="MessageText" msprop:Generator_ColumnVarNameInTable="columnMessageText" type="xs:string" minOccurs="0" />
+              <xs:element name="CipherText" msprop:Generator_UserColumnName="CipherText" msprop:Generator_ColumnPropNameInTable="CipherTextColumn" msprop:Generator_ColumnPropNameInRow="CipherText" msprop:Generator_ColumnVarNameInTable="columnCipherText" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -119,8 +119,8 @@
       <xs:selector xpath=".//mstns:dtKEYs" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
-    <xs:unique name="dtPlug1_Constraint1" msdata:ConstraintName="Constraint1">
-      <xs:selector xpath=".//mstns:dtPlug1" />
+    <xs:unique name="dtPlugs_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:dtPlugs" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>

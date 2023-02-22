@@ -32,7 +32,7 @@ namespace Enigma {
         
         private dtKEYsDataTable tabledtKEYs;
         
-        private dtPlug1DataTable tabledtPlug1;
+        private dtPlugsDataTable tabledtPlugs;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -74,8 +74,8 @@ namespace Enigma {
                 if ((ds.Tables["dtKEYs"] != null)) {
                     base.Tables.Add(new dtKEYsDataTable(ds.Tables["dtKEYs"]));
                 }
-                if ((ds.Tables["dtPlug1"] != null)) {
-                    base.Tables.Add(new dtPlug1DataTable(ds.Tables["dtPlug1"]));
+                if ((ds.Tables["dtPlugs"] != null)) {
+                    base.Tables.Add(new dtPlugsDataTable(ds.Tables["dtPlugs"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -139,9 +139,9 @@ namespace Enigma {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public dtPlug1DataTable dtPlug1 {
+        public dtPlugsDataTable dtPlugs {
             get {
-                return this.tabledtPlug1;
+                return this.tabledtPlugs;
             }
         }
         
@@ -224,8 +224,8 @@ namespace Enigma {
                 if ((ds.Tables["dtKEYs"] != null)) {
                     base.Tables.Add(new dtKEYsDataTable(ds.Tables["dtKEYs"]));
                 }
-                if ((ds.Tables["dtPlug1"] != null)) {
-                    base.Tables.Add(new dtPlug1DataTable(ds.Tables["dtPlug1"]));
+                if ((ds.Tables["dtPlugs"] != null)) {
+                    base.Tables.Add(new dtPlugsDataTable(ds.Tables["dtPlugs"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -284,10 +284,10 @@ namespace Enigma {
                     this.tabledtKEYs.InitVars();
                 }
             }
-            this.tabledtPlug1 = ((dtPlug1DataTable)(base.Tables["dtPlug1"]));
+            this.tabledtPlugs = ((dtPlugsDataTable)(base.Tables["dtPlugs"]));
             if ((initTable == true)) {
-                if ((this.tabledtPlug1 != null)) {
-                    this.tabledtPlug1.InitVars();
+                if ((this.tabledtPlugs != null)) {
+                    this.tabledtPlugs.InitVars();
                 }
             }
         }
@@ -308,8 +308,8 @@ namespace Enigma {
             base.Tables.Add(this.tabledtRotorMAndRingM);
             this.tabledtKEYs = new dtKEYsDataTable();
             base.Tables.Add(this.tabledtKEYs);
-            this.tabledtPlug1 = new dtPlug1DataTable();
-            base.Tables.Add(this.tabledtPlug1);
+            this.tabledtPlugs = new dtPlugsDataTable();
+            base.Tables.Add(this.tabledtPlugs);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -338,7 +338,7 @@ namespace Enigma {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializedtPlug1() {
+        private bool ShouldSerializedtPlugs() {
             return false;
         }
         
@@ -410,7 +410,7 @@ namespace Enigma {
         public delegate void dtKEYsRowChangeEventHandler(object sender, dtKEYsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void dtPlug1RowChangeEventHandler(object sender, dtPlug1RowChangeEvent e);
+        public delegate void dtPlugsRowChangeEventHandler(object sender, dtPlugsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2019,7 +2019,7 @@ namespace Enigma {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dtPlug1DataTable : global::System.Data.TypedTableBase<dtPlug1Row> {
+        public partial class dtPlugsDataTable : global::System.Data.TypedTableBase<dtPlugsRow> {
             
             private global::System.Data.DataColumn columnID;
             
@@ -2049,8 +2049,8 @@ namespace Enigma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtPlug1DataTable() {
-                this.TableName = "dtPlug1";
+            public dtPlugsDataTable() {
+                this.TableName = "dtPlugs";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2058,7 +2058,7 @@ namespace Enigma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal dtPlug1DataTable(global::System.Data.DataTable table) {
+            internal dtPlugsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2075,7 +2075,7 @@ namespace Enigma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected dtPlug1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dtPlugsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2195,34 +2195,34 @@ namespace Enigma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtPlug1Row this[int index] {
+            public dtPlugsRow this[int index] {
                 get {
-                    return ((dtPlug1Row)(this.Rows[index]));
+                    return ((dtPlugsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dtPlug1RowChangeEventHandler dtPlug1RowChanging;
+            public event dtPlugsRowChangeEventHandler dtPlugsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dtPlug1RowChangeEventHandler dtPlug1RowChanged;
+            public event dtPlugsRowChangeEventHandler dtPlugsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dtPlug1RowChangeEventHandler dtPlug1RowDeleting;
+            public event dtPlugsRowChangeEventHandler dtPlugsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event dtPlug1RowChangeEventHandler dtPlug1RowDeleted;
+            public event dtPlugsRowChangeEventHandler dtPlugsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AdddtPlug1Row(dtPlug1Row row) {
+            public void AdddtPlugsRow(dtPlugsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtPlug1Row AdddtPlug1Row(string ref_ID, int IOC, int ref_IOC, int IOCDifference, string Reflector, string RotorLeft, string RotorMiddle, string RotorRight, string CipherKEY, string Plugs, string MessageText, string CipherText) {
-                dtPlug1Row rowdtPlug1Row = ((dtPlug1Row)(this.NewRow()));
+            public dtPlugsRow AdddtPlugsRow(string ref_ID, int IOC, int ref_IOC, int IOCDifference, string Reflector, string RotorLeft, string RotorMiddle, string RotorRight, string CipherKEY, string Plugs, string MessageText, string CipherText) {
+                dtPlugsRow rowdtPlugsRow = ((dtPlugsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         ref_ID,
@@ -2237,15 +2237,15 @@ namespace Enigma {
                         Plugs,
                         MessageText,
                         CipherText};
-                rowdtPlug1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdtPlug1Row);
-                return rowdtPlug1Row;
+                rowdtPlugsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdtPlugsRow);
+                return rowdtPlugsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                dtPlug1DataTable cln = ((dtPlug1DataTable)(base.Clone()));
+                dtPlugsDataTable cln = ((dtPlugsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2253,7 +2253,7 @@ namespace Enigma {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new dtPlug1DataTable();
+                return new dtPlugsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2314,28 +2314,28 @@ namespace Enigma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtPlug1Row NewdtPlug1Row() {
-                return ((dtPlug1Row)(this.NewRow()));
+            public dtPlugsRow NewdtPlugsRow() {
+                return ((dtPlugsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new dtPlug1Row(builder);
+                return new dtPlugsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(dtPlug1Row);
+                return typeof(dtPlugsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.dtPlug1RowChanged != null)) {
-                    this.dtPlug1RowChanged(this, new dtPlug1RowChangeEvent(((dtPlug1Row)(e.Row)), e.Action));
+                if ((this.dtPlugsRowChanged != null)) {
+                    this.dtPlugsRowChanged(this, new dtPlugsRowChangeEvent(((dtPlugsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2343,8 +2343,8 @@ namespace Enigma {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.dtPlug1RowChanging != null)) {
-                    this.dtPlug1RowChanging(this, new dtPlug1RowChangeEvent(((dtPlug1Row)(e.Row)), e.Action));
+                if ((this.dtPlugsRowChanging != null)) {
+                    this.dtPlugsRowChanging(this, new dtPlugsRowChangeEvent(((dtPlugsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2352,8 +2352,8 @@ namespace Enigma {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.dtPlug1RowDeleted != null)) {
-                    this.dtPlug1RowDeleted(this, new dtPlug1RowChangeEvent(((dtPlug1Row)(e.Row)), e.Action));
+                if ((this.dtPlugsRowDeleted != null)) {
+                    this.dtPlugsRowDeleted(this, new dtPlugsRowChangeEvent(((dtPlugsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2361,14 +2361,14 @@ namespace Enigma {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.dtPlug1RowDeleting != null)) {
-                    this.dtPlug1RowDeleting(this, new dtPlug1RowChangeEvent(((dtPlug1Row)(e.Row)), e.Action));
+                if ((this.dtPlugsRowDeleting != null)) {
+                    this.dtPlugsRowDeleting(this, new dtPlugsRowChangeEvent(((dtPlugsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovedtPlug1Row(dtPlug1Row row) {
+            public void RemovedtPlugsRow(dtPlugsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2395,7 +2395,7 @@ namespace Enigma {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "dtPlug1DataTable";
+                attribute2.FixedValue = "dtPlugsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3685,25 +3685,25 @@ namespace Enigma {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class dtPlug1Row : global::System.Data.DataRow {
+        public partial class dtPlugsRow : global::System.Data.DataRow {
             
-            private dtPlug1DataTable tabledtPlug1;
+            private dtPlugsDataTable tabledtPlugs;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal dtPlug1Row(global::System.Data.DataRowBuilder rb) : 
+            internal dtPlugsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledtPlug1 = ((dtPlug1DataTable)(this.Table));
+                this.tabledtPlugs = ((dtPlugsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tabledtPlug1.IDColumn]));
+                    return ((int)(this[this.tabledtPlugs.IDColumn]));
                 }
                 set {
-                    this[this.tabledtPlug1.IDColumn] = value;
+                    this[this.tabledtPlugs.IDColumn] = value;
                 }
             }
             
@@ -3711,10 +3711,10 @@ namespace Enigma {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string ref_ID {
                 get {
-                    return ((string)(this[this.tabledtPlug1.ref_IDColumn]));
+                    return ((string)(this[this.tabledtPlugs.ref_IDColumn]));
                 }
                 set {
-                    this[this.tabledtPlug1.ref_IDColumn] = value;
+                    this[this.tabledtPlugs.ref_IDColumn] = value;
                 }
             }
             
@@ -3723,14 +3723,14 @@ namespace Enigma {
             public int IOC {
                 get {
                     try {
-                        return ((int)(this[this.tabledtPlug1.IOCColumn]));
+                        return ((int)(this[this.tabledtPlugs.IOCColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IOC\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IOC\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.IOCColumn] = value;
+                    this[this.tabledtPlugs.IOCColumn] = value;
                 }
             }
             
@@ -3739,14 +3739,14 @@ namespace Enigma {
             public int ref_IOC {
                 get {
                     try {
-                        return ((int)(this[this.tabledtPlug1.ref_IOCColumn]));
+                        return ((int)(this[this.tabledtPlugs.ref_IOCColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ref_IOC\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ref_IOC\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.ref_IOCColumn] = value;
+                    this[this.tabledtPlugs.ref_IOCColumn] = value;
                 }
             }
             
@@ -3755,14 +3755,14 @@ namespace Enigma {
             public int IOCDifference {
                 get {
                     try {
-                        return ((int)(this[this.tabledtPlug1.IOCDifferenceColumn]));
+                        return ((int)(this[this.tabledtPlugs.IOCDifferenceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IOCDifference\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IOCDifference\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.IOCDifferenceColumn] = value;
+                    this[this.tabledtPlugs.IOCDifferenceColumn] = value;
                 }
             }
             
@@ -3771,14 +3771,14 @@ namespace Enigma {
             public string Reflector {
                 get {
                     try {
-                        return ((string)(this[this.tabledtPlug1.ReflectorColumn]));
+                        return ((string)(this[this.tabledtPlugs.ReflectorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Reflector\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Reflector\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.ReflectorColumn] = value;
+                    this[this.tabledtPlugs.ReflectorColumn] = value;
                 }
             }
             
@@ -3787,14 +3787,14 @@ namespace Enigma {
             public string RotorLeft {
                 get {
                     try {
-                        return ((string)(this[this.tabledtPlug1.RotorLeftColumn]));
+                        return ((string)(this[this.tabledtPlugs.RotorLeftColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RotorLeft\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RotorLeft\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.RotorLeftColumn] = value;
+                    this[this.tabledtPlugs.RotorLeftColumn] = value;
                 }
             }
             
@@ -3803,14 +3803,14 @@ namespace Enigma {
             public string RotorMiddle {
                 get {
                     try {
-                        return ((string)(this[this.tabledtPlug1.RotorMiddleColumn]));
+                        return ((string)(this[this.tabledtPlugs.RotorMiddleColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RotorMiddle\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RotorMiddle\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.RotorMiddleColumn] = value;
+                    this[this.tabledtPlugs.RotorMiddleColumn] = value;
                 }
             }
             
@@ -3819,14 +3819,14 @@ namespace Enigma {
             public string RotorRight {
                 get {
                     try {
-                        return ((string)(this[this.tabledtPlug1.RotorRightColumn]));
+                        return ((string)(this[this.tabledtPlugs.RotorRightColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RotorRight\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RotorRight\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.RotorRightColumn] = value;
+                    this[this.tabledtPlugs.RotorRightColumn] = value;
                 }
             }
             
@@ -3835,14 +3835,14 @@ namespace Enigma {
             public string CipherKEY {
                 get {
                     try {
-                        return ((string)(this[this.tabledtPlug1.CipherKEYColumn]));
+                        return ((string)(this[this.tabledtPlugs.CipherKEYColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CipherKEY\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CipherKEY\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.CipherKEYColumn] = value;
+                    this[this.tabledtPlugs.CipherKEYColumn] = value;
                 }
             }
             
@@ -3851,14 +3851,14 @@ namespace Enigma {
             public string Plugs {
                 get {
                     try {
-                        return ((string)(this[this.tabledtPlug1.PlugsColumn]));
+                        return ((string)(this[this.tabledtPlugs.PlugsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Plugs\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Plugs\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.PlugsColumn] = value;
+                    this[this.tabledtPlugs.PlugsColumn] = value;
                 }
             }
             
@@ -3867,14 +3867,14 @@ namespace Enigma {
             public string MessageText {
                 get {
                     try {
-                        return ((string)(this[this.tabledtPlug1.MessageTextColumn]));
+                        return ((string)(this[this.tabledtPlugs.MessageTextColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MessageText\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'MessageText\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.MessageTextColumn] = value;
+                    this[this.tabledtPlugs.MessageTextColumn] = value;
                 }
             }
             
@@ -3883,147 +3883,147 @@ namespace Enigma {
             public string CipherText {
                 get {
                     try {
-                        return ((string)(this[this.tabledtPlug1.CipherTextColumn]));
+                        return ((string)(this[this.tabledtPlugs.CipherTextColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CipherText\' in table \'dtPlug1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CipherText\' in table \'dtPlugs\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtPlug1.CipherTextColumn] = value;
+                    this[this.tabledtPlugs.CipherTextColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsIOCNull() {
-                return this.IsNull(this.tabledtPlug1.IOCColumn);
+                return this.IsNull(this.tabledtPlugs.IOCColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetIOCNull() {
-                this[this.tabledtPlug1.IOCColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.IOCColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isref_IOCNull() {
-                return this.IsNull(this.tabledtPlug1.ref_IOCColumn);
+                return this.IsNull(this.tabledtPlugs.ref_IOCColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setref_IOCNull() {
-                this[this.tabledtPlug1.ref_IOCColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.ref_IOCColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsIOCDifferenceNull() {
-                return this.IsNull(this.tabledtPlug1.IOCDifferenceColumn);
+                return this.IsNull(this.tabledtPlugs.IOCDifferenceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetIOCDifferenceNull() {
-                this[this.tabledtPlug1.IOCDifferenceColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.IOCDifferenceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsReflectorNull() {
-                return this.IsNull(this.tabledtPlug1.ReflectorColumn);
+                return this.IsNull(this.tabledtPlugs.ReflectorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetReflectorNull() {
-                this[this.tabledtPlug1.ReflectorColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.ReflectorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRotorLeftNull() {
-                return this.IsNull(this.tabledtPlug1.RotorLeftColumn);
+                return this.IsNull(this.tabledtPlugs.RotorLeftColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRotorLeftNull() {
-                this[this.tabledtPlug1.RotorLeftColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.RotorLeftColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRotorMiddleNull() {
-                return this.IsNull(this.tabledtPlug1.RotorMiddleColumn);
+                return this.IsNull(this.tabledtPlugs.RotorMiddleColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRotorMiddleNull() {
-                this[this.tabledtPlug1.RotorMiddleColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.RotorMiddleColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRotorRightNull() {
-                return this.IsNull(this.tabledtPlug1.RotorRightColumn);
+                return this.IsNull(this.tabledtPlugs.RotorRightColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRotorRightNull() {
-                this[this.tabledtPlug1.RotorRightColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.RotorRightColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsCipherKEYNull() {
-                return this.IsNull(this.tabledtPlug1.CipherKEYColumn);
+                return this.IsNull(this.tabledtPlugs.CipherKEYColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetCipherKEYNull() {
-                this[this.tabledtPlug1.CipherKEYColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.CipherKEYColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsPlugsNull() {
-                return this.IsNull(this.tabledtPlug1.PlugsColumn);
+                return this.IsNull(this.tabledtPlugs.PlugsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetPlugsNull() {
-                this[this.tabledtPlug1.PlugsColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.PlugsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsMessageTextNull() {
-                return this.IsNull(this.tabledtPlug1.MessageTextColumn);
+                return this.IsNull(this.tabledtPlugs.MessageTextColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetMessageTextNull() {
-                this[this.tabledtPlug1.MessageTextColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.MessageTextColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsCipherTextNull() {
-                return this.IsNull(this.tabledtPlug1.CipherTextColumn);
+                return this.IsNull(this.tabledtPlugs.CipherTextColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetCipherTextNull() {
-                this[this.tabledtPlug1.CipherTextColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPlugs.CipherTextColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4167,22 +4167,22 @@ namespace Enigma {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class dtPlug1RowChangeEvent : global::System.EventArgs {
+        public class dtPlugsRowChangeEvent : global::System.EventArgs {
             
-            private dtPlug1Row eventRow;
+            private dtPlugsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtPlug1RowChangeEvent(dtPlug1Row row, global::System.Data.DataRowAction action) {
+            public dtPlugsRowChangeEvent(dtPlugsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtPlug1Row Row {
+            public dtPlugsRow Row {
                 get {
                     return this.eventRow;
                 }

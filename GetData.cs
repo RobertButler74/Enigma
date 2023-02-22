@@ -20,7 +20,6 @@ namespace Enigma
 
             XmlNodeList xmlNodeList = xmlDoc.GetElementsByTagName(GetDataTableName);
 
-            int IoC = 0;
             int ukw = 0;
             string walzeL = "";
             string walzeM = "";
@@ -75,7 +74,6 @@ namespace Enigma
                     }
                 }
 
-                Cipher.minIoC = IoC + 1;
                 int walzen = Rotors.RomanToNum(walzeL) * 100;
                 walzen += Rotors.RomanToNum(walzeM) * 10;
                 walzen += Rotors.RomanToNum(walzeR);
@@ -112,7 +110,6 @@ namespace Enigma
 
             XmlNodeList xmlNodeList = xmlDoc.GetElementsByTagName(GetDataTableName);
 
-            int IoC = 0;
             int ukw = 0;
             string walzeL = "";
             string walzeM = "";
@@ -169,7 +166,6 @@ namespace Enigma
                     }
                 }
 
-                Cipher.minIoC = IoC + 1;
                 int walzen = Rotors.RomanToNum(walzeL) * 100;
                 walzen += Rotors.RomanToNum(walzeM) * 10;
                 walzen += Rotors.RomanToNum(walzeR);
@@ -200,14 +196,13 @@ namespace Enigma
             }
         }
 
-        public static void GetDataPlugs()
+        public static void GetDataPlugs(int intPlugNumber)
         {
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(GetDataXmlFile);
 
             XmlNodeList xmlNodeList = xmlDoc.GetElementsByTagName(GetDataTableName);
 
-            int IoC = 0;
             int ukw = 0;
             string walzeL = "";
             string walzeM = "";
@@ -243,12 +238,14 @@ namespace Enigma
                         case "RotorLeft":
                             {
                                 walzeL = xmlNode.InnerText;
+                                ringL = walzeL.Substring(walzeL.Length - 1);
                                 walzeL = walzeL.Substring(0, walzeL.Length - 2);
                                 break;
                             }
                         case "RotorMiddle":
                             {
                                 walzeM = xmlNode.InnerText;
+                                ringM = walzeM.Substring(walzeM.Length - 1);
                                 walzeM = walzeM.Substring(0, walzeM.Length - 2);
                                 break;
                             }
@@ -266,7 +263,8 @@ namespace Enigma
                             }
                         case "Plugs":
                             {
-
+                                EnigmaMachine.plugs = xmlNode.InnerText.Split('-');                                
+                                break;
                             }
                     }
                 }
@@ -275,29 +273,11 @@ namespace Enigma
                 walzen += Rotors.RomanToNum(walzeM) * 10;
                 walzen += Rotors.RomanToNum(walzeR);
 
-                int intKeyM;
-                int intRingM;
-                int index;
+                string rings = ringL;
+                rings += ringM;
+                rings += ringR;
 
-                for (index = 1; index <= 25; index++)
-                {
-                    char chrKeyM = Convert.ToChar(cipherKEY.Substring(1, 1));
-                    intKeyM = Convert.ToInt32(chrKeyM) - 64;
-                    intRingM = 1;
-                    intKeyM += index;
-                    intRingM += index;
-
-                    if (intKeyM > 26)
-                        intKeyM -= 26;
-                    if (intRingM > 26)
-                        intRingM -= 26;
-
-                    string newCipherKEY;
-                    newCipherKEY = cipherKEY.Replace(cipherKEY.Substring(1), Char.ConvertFromUtf32(intKeyM + 64));
-                    newCipherKEY += cipherKEY[2];
-                    string rings = "A" + Char.ConvertFromUtf32(intRingM + 64) + ringR;
-                    EnigmaMachine.EnigmaSetup(ukw, walzen, newCipherKEY, rings);
-                }
+                EnigmaMachine.SetPlugs(intPlugNumber, intPlugNumber, ukw, walzen, cipherKEY, rings);
             }
         }
 

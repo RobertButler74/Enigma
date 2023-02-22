@@ -16,26 +16,20 @@ namespace Enigma
         {
             this.left = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             this.right = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            int pos_B;
-            int pos_A;
-            string B;
-            string A;
+            string plug;
+            string plugInverted;
 
             for (int i = 1; i <= pairs.Length - 1; i++)
             {
-                if (pairs[i] == null)
+                if (pairs[i] == null || pairs[i] == "")
                 {
                     break;
                 }
                 else
-                {
-                    A = pairs[i].Substring(0, 1);
-                    B = pairs[i].Substring(1, 1);
-                    pos_A = this.left.IndexOf(A);
-                    pos_B = this.left.IndexOf(B);
-
-                    this.left = this.left.Substring(1, pos_A) + B + this.left.Substring(pos_A + 1 + 1, this.left.Length - pos_A + 1);
-                    this.left = this.left.Substring(1, pos_B) + A + this.left.Substring(pos_B + 1 + 1, this.left.Length - pos_A + 1);
+                {    
+                    plug = pairs[i];
+                    plugInverted = plug.Substring(1, 1) + plug.Substring(0, 1);
+                    this.left = this.left.Replace(plug, plugInverted);                    
                 }
             }
         }

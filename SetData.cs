@@ -29,7 +29,7 @@ namespace Enigma
                 dataInfo += walzeR + "-" + rings.Substring(2, 1) + " | ";
                 dataInfo += cipherKEY + " | ";
 
-                for (int i = 0; i <= EnigmaMachine.plugs.Length - 1; i++)
+                for (int i = 1; i <= EnigmaMachine.plugs.Length - 1; i++)
                 {
                     dataInfo += EnigmaMachine.plugs[i] + "-";
                 }
@@ -45,7 +45,7 @@ namespace Enigma
                 dataInfo += walzeR + "-" + rings.Substring(2, 1) + "|";
                 dataInfo += cipherKEY + "|";
 
-                for (int i = 0; i <= EnigmaMachine.plugs.Length - 1; i++)
+                for (int i = 1; i <= EnigmaMachine.plugs.Length - 1; i++)
                 {
                     dataInfo += EnigmaMachine.plugs[i] + "-";
                 }
@@ -56,10 +56,7 @@ namespace Enigma
                 dataInfo += cipherText;
             }
             
-           
             return dataInfo;
-
-
         }
     }
 }

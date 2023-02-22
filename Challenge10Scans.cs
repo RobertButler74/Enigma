@@ -44,8 +44,27 @@ namespace Enigma
             GetData.GetDataRotorMAndRingM();
         }
 
-        public static void Plugs()
+        public static void Plugs(int intPlugnumber)
         {
+            Cipher.messageText = "KYYUGIWKSEYPQDFYPIJNTGNDIAHNBROXDIKEKPTMOUHBEJRRJPVBAOCUZRDFSAZDCNUNNMRPCCMCHJBWSTIKZIREBBVJQAXZARIYVANIJVOLDNBUMXXFNZVRQEGOYXEVVNMPWEBSKEUTJJOKPBKLHIYWGNFFPXKIEWSNTLMDKYIDMOFPTDFJAZOHVVQETNIPVZGTUMYJCMSEAKTYELPZUNHEYFCLAADYPEEXMHQMVAVZZDOIMGLERBBLATHQJIYCBSUPVVTRADCRDDSTYIXYFEAFZYLNZZDPNNXXZJNRCWEXMTYRJOIAOEKNRXGXPNMTDGKFZDSYHMUJAPOBGANCRCZTMEPXESDZTTJZGNGQRMKNCZNAFMDAXXTJSRTAZTZKRTOXHAHTNPEVNAAVUZMHLPXLMSTWELSOBCTMBKGCJKMDPDQQGCZHMIOCGRPDJEZTYVDQGNPUKCGKFFWMNKWPSCLENWHUEYCLYVHZNKNVSCZXUXDPZBDPSYODLQRLCGHARLFMMTPOCUMOQLGJJAVXHZZVBFLXHNNEJXS";
+
+            Cipher.blIoCDiff = true;
+
+            if(intPlugnumber == 1)
+            {
+                GetData.GetDataXmlFile = "RotorMAndRingM.xml";
+                GetData.GetDataTableName = "dtRotorMAndRingM";
+            }
+            else
+            {
+                string tmpXmlFileName = "dtPlug" + Convert.ToString(intPlugnumber - 1);
+
+                GetData.GetDataXmlFile = "Plugs";
+                GetData.GetDataTableName = tmpXmlFileName;
+
+            }
+
+            GetData.GetDataPlugs(intPlugnumber);
 
         }
 

@@ -59,6 +59,7 @@ namespace Enigma
             {
                 string plugNumber = GbxScanSelection.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Name;
                 int intPlugNumber = Convert.ToInt32(plugNumber.Substring(8));
+                CreatePlugForm(frmTemp, intPlugNumber);
                 return;
             }
             /*
@@ -89,14 +90,17 @@ namespace Enigma
             frmTemp.Show();
         }
 
-        private void CreatePlugForm(Form frmTemp, int intPlugNumber)
+        private void CreatePlugForm(Form frmTemp, int _intPlugNumber)
         {
-
+            frmTemp = new FrmPlugs();
+            FrmPlugs.ownerGBX = GbxScanSelection;
+            FrmPlugs.intPlugNumber = _intPlugNumber;
+            OpenScan(frmTemp);
         }
 
         private void BtnTestPlugs_Click(object sender, EventArgs e)
         {
-            EnigmaMachine.SetPlugs(1, 2);
+            //EnigmaMachine.SetPlugs(1, 2);
         }
     }
 }

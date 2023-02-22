@@ -80,7 +80,7 @@
             // 
             // dtPlugsBindingSource
             // 
-            this.dtPlugsBindingSource.DataMember = "dtPlug1";
+            this.dtPlugsBindingSource.DataMember = "dtPlugs";
             this.dtPlugsBindingSource.DataSource = this.dsEnigmaChallenges;
             // 
             // dtPlugsBindingNavigator
@@ -247,6 +247,7 @@
             this.TsBtnExitScan.Name = "TsBtnExitScan";
             this.TsBtnExitScan.Size = new System.Drawing.Size(30, 22);
             this.TsBtnExitScan.Text = "Exit";
+            this.TsBtnExitScan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.TsBtnExitScan.ToolTipText = "Exit scan";
             this.TsBtnExitScan.Click += new System.EventHandler(this.TsBtnExitScan_Click);
             // 
@@ -374,7 +375,7 @@
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "MessageText";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Messag tText";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Message text";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.Width = 285;
             // 
@@ -434,12 +435,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton dtPlugsBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView DgvDtPlugs;
-        private System.Windows.Forms.ToolStripButton TsBtnStartScan;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton TsBtnExitScan;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripLabel TsLabelInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -453,6 +448,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.ToolStripButton TsBtnStartScan;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton TsBtnExitScan;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripLabel TsLabelInfo;
         private System.ComponentModel.BackgroundWorker BGWCipher;
     }
 }

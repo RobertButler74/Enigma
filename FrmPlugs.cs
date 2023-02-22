@@ -16,11 +16,11 @@ namespace Enigma
     public partial class FrmPlugs : Form
     {
 
-        public static string enigmaXmlFilePath;
+        private string enigmaXmlFilePath;
         int _width;
 
         public static GroupBox ownerGBX;
-        public static int intPlugnumber;
+        public static int intPlugNumber;
 
         public FrmPlugs()
         {
@@ -30,6 +30,8 @@ namespace Enigma
         private void FrmPlugs_Load(object sender, EventArgs e)
         {
             _width = this.ClientSize.Width;
+
+            GetXmlFileName();
 
             if (File.Exists(enigmaXmlFilePath))
             {
@@ -41,6 +43,13 @@ namespace Enigma
             {
                 TsBtnStartScan.Enabled = true;
             }
+        }
+
+        private void GetXmlFileName()
+        {
+            string tmpFileName = "Plug" + Convert.ToString(intPlugNumber);
+            tmpFileName += ".xml";
+            enigmaXmlFilePath = tmpFileName;
         }
 
         private void FrmPlugs_Resize(object sender, EventArgs e)
@@ -133,7 +142,7 @@ namespace Enigma
         private void BGWCipher_DoWork(object sender, DoWorkEventArgs e)
         {
             Cipher.BGWCipher = BGWCipher;
-            Challenge10Scans.Plugs();
+            Challenge10Scans.Plugs(intPlugNumber);
         }
 
         private void BGWCipher_ProgressChanged(object sender, ProgressChangedEventArgs e)
