@@ -263,7 +263,12 @@ namespace Enigma
                             }
                         case "Plugs":
                             {
-                                EnigmaMachine.plugs = xmlNode.InnerText.Split('-');                                
+                                string[] arrTemp = xmlNode.InnerText.Split('-');
+
+                                for(int i = 0; i <= 9; i++)
+                                {
+                                    EnigmaMachine.plugs[i + 1] = arrTemp[i];
+                                }                   
                                 break;
                             }
                     }

@@ -57,10 +57,10 @@ namespace Enigma
             }
             else
             {
-                string tmpXmlFileName = "dtPlug" + Convert.ToString(intPlugnumber - 1);
+                string tmpXmlFileName = "Plug" + Convert.ToString(intPlugnumber - 1);
 
-                GetData.GetDataXmlFile = "Plugs";
-                GetData.GetDataTableName = tmpXmlFileName;
+                GetData.GetDataXmlFile = tmpXmlFileName + ".xml";
+                GetData.GetDataTableName = "dtPlugs";
 
             }
 

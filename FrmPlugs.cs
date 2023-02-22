@@ -159,6 +159,7 @@ namespace Enigma
                 TsLabelInfo.Font = new Font("FreeMono", 10, FontStyle.Bold);
                 TsLabelInfo.Text = infoText;
             }
+            Cipher.blGuiUpdated = true;
         }
 
         private void CreateDataGridViewDATA(string infoText)

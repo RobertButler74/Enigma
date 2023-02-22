@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Enigma
@@ -27,6 +28,8 @@ namespace Enigma
 
         public static int intIoC;
         public static int IoCDiff;
+
+        public static bool blGuiUpdated = false;
 
         public Cipher()
         {
@@ -58,6 +61,13 @@ namespace Enigma
             BGWCipher.ReportProgress(0, dataInfo);
             //Debug.WriteLine(dataInfo.Substring(3));
 
+            //while (!blGuiUpdated)
+            //{
+            //    await Task.Delay(1);
+            //}
+
+            //blGuiUpdated = false;
+
             double IoC = Analyzation.MonogramIOC(cipherText);
             IoC = Math.Round(IoC, 5);
             intIoC = Convert.ToInt32(IoC * 100000);
@@ -72,8 +82,15 @@ namespace Enigma
             if ((!blIoCDiff && intIoC >= minIoC && !blCompare) || (blIoCDiff && IoCDiff > 0 && !blCompare) || (blCompare && cipherText == compare))
             {
                 dataInfo = SetData.SetDataInfo(enigmaMachine, messageText,cipherText, true);
-                BGWCipher.ReportProgress(0, dataInfo);                
+                BGWCipher.ReportProgress(0, dataInfo);
                 Thread.Sleep(50);
+
+                //while (!blGuiUpdated)
+                //{
+                //    await Task.Delay(1);
+                //}
+
+                //blGuiUpdated = false;
             }
 
             /*
