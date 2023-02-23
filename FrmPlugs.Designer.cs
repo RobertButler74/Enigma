@@ -258,6 +258,7 @@
             // 
             // TsLabelInfo
             // 
+            this.TsLabelInfo.Font = new System.Drawing.Font("FreeMono", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TsLabelInfo.Name = "TsLabelInfo";
             this.TsLabelInfo.Size = new System.Drawing.Size(0, 22);
             // 
@@ -283,6 +284,7 @@
             this.DgvDtPlugs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvDtPlugs.Location = new System.Drawing.Point(0, 25);
             this.DgvDtPlugs.Name = "DgvDtPlugs";
+            this.DgvDtPlugs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DgvDtPlugs.Size = new System.Drawing.Size(1143, 598);
             this.DgvDtPlugs.TabIndex = 1;
             // 
@@ -453,7 +455,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton TsBtnExitScan;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripLabel TsLabelInfo;
         private System.ComponentModel.BackgroundWorker BGWCipher;
+        public System.Windows.Forms.ToolStripLabel TsLabelInfo;
     }
 }

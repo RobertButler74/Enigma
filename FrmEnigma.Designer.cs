@@ -38,7 +38,6 @@
             this.RbtnRotorsAndKEY = new System.Windows.Forms.RadioButton();
             this.BtnOpenScan = new System.Windows.Forms.Button();
             this.PnlDGV = new System.Windows.Forms.Panel();
-            this.PbxEnigma = new System.Windows.Forms.PictureBox();
             this.RbtnPlug1 = new System.Windows.Forms.RadioButton();
             this.RbtnPlug2 = new System.Windows.Forms.RadioButton();
             this.RbtnPlug3 = new System.Windows.Forms.RadioButton();
@@ -49,6 +48,7 @@
             this.RbtnPlug8 = new System.Windows.Forms.RadioButton();
             this.RbtnPlug9 = new System.Windows.Forms.RadioButton();
             this.RbtnPlug10 = new System.Windows.Forms.RadioButton();
+            this.PbxEnigma = new System.Windows.Forms.PictureBox();
             this.PnlSelection.SuspendLayout();
             this.GbxScanSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxEnigma)).BeginInit();
@@ -76,6 +76,8 @@
             // 
             // BtnTestPlugs
             // 
+            this.BtnTestPlugs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnTestPlugs.Enabled = false;
             this.BtnTestPlugs.Location = new System.Drawing.Point(193, 611);
             this.BtnTestPlugs.Name = "BtnTestPlugs";
@@ -110,6 +112,8 @@
             // 
             // RbtnKEYs
             // 
+            this.RbtnKEYs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.RbtnKEYs.AutoSize = true;
             this.RbtnKEYs.Enabled = false;
             this.RbtnKEYs.Location = new System.Drawing.Point(3, 614);
@@ -168,18 +172,6 @@
             this.PnlDGV.Name = "PnlDGV";
             this.PnlDGV.Size = new System.Drawing.Size(1159, 639);
             this.PnlDGV.TabIndex = 3;
-            // 
-            // PbxEnigma
-            // 
-            this.PbxEnigma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.PbxEnigma.BackgroundImage = global::Enigma.Properties.Resources._114x50_Enigma_logo;
-            this.PbxEnigma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PbxEnigma.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PbxEnigma.Location = new System.Drawing.Point(0, 0);
-            this.PbxEnigma.Name = "PbxEnigma";
-            this.PbxEnigma.Size = new System.Drawing.Size(1434, 50);
-            this.PbxEnigma.TabIndex = 0;
-            this.PbxEnigma.TabStop = false;
             // 
             // RbtnPlug1
             // 
@@ -292,6 +284,18 @@
             this.RbtnPlug10.TabStop = true;
             this.RbtnPlug10.Text = "Scan Plug 10";
             this.RbtnPlug10.UseVisualStyleBackColor = true;
+            // 
+            // PbxEnigma
+            // 
+            this.PbxEnigma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.PbxEnigma.BackgroundImage = global::Enigma.Properties.Resources._114x50_Enigma_logo;
+            this.PbxEnigma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PbxEnigma.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PbxEnigma.Location = new System.Drawing.Point(0, 0);
+            this.PbxEnigma.Name = "PbxEnigma";
+            this.PbxEnigma.Size = new System.Drawing.Size(1434, 50);
+            this.PbxEnigma.TabIndex = 0;
+            this.PbxEnigma.TabStop = false;
             // 
             // FrmEnigma
             // 

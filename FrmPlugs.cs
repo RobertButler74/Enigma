@@ -22,6 +22,15 @@ namespace Enigma
         public static GroupBox ownerGBX;
         public static int intPlugNumber;
 
+        public static ToolStripLabel tsLabel = new ToolStripLabel();
+
+        private string tsLabelInfoText;
+        public string TsLabelInfoText
+            {
+                get { return TsLabelInfo.Text; }
+                set { TsLabelInfo.Text = value;}
+            }
+
         public FrmPlugs()
         {
             InitializeComponent();
@@ -30,6 +39,7 @@ namespace Enigma
         private void FrmPlugs_Load(object sender, EventArgs e)
         {
             _width = this.ClientSize.Width;
+            tsLabel = TsLabelInfo;
 
             GetXmlFileName();
 
@@ -75,8 +85,30 @@ namespace Enigma
                 TsBtnStartScan.Tag = "Stop";
                 TsBtnStartScan.Enabled = false;
                 TsBtnExitScan.Enabled = false;
-                BGWCipher.RunWorkerAsync();
+                Cipher.scanNumber = 4;
+                Cipher.tmpFrmPlug = this;
+                DoWork();
+                //BGWCipher.RunWorkerAsync();
             }
+        }
+
+        private Task<bool> RunCipher()
+        {
+            TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
+            Task.Run(() =>
+            {
+                Challenge10Scans.Plugs(intPlugNumber);
+                bool result = true;
+                tcs.SetResult(result);
+
+            });
+
+            return tcs.Task;
+        }
+
+        private async Task DoWork()
+        {
+            bool result = await RunCipher();
         }
 
         private void TsBtnStartScan_MouseEnter(object sender, EventArgs e)
@@ -158,6 +190,7 @@ namespace Enigma
                 infoText = infoText.Substring(3);
                 TsLabelInfo.Font = new Font("FreeMono", 10, FontStyle.Bold);
                 TsLabelInfo.Text = infoText;
+                
             }
             Cipher.blGuiUpdated = true;
         }
@@ -185,13 +218,42 @@ namespace Enigma
             myDataRow["CipherText"] = infoList[7];
 
             this.dsEnigmaChallenges.Tables[4].Rows.Add(myDataRow);
-            dtPlugsBindingNavigatorSaveItem.Enabled = true;
+            if (dtPlugsBindingNavigator.InvokeRequired)
+            {
+                dtPlugsBindingNavigator.Invoke(new MethodInvoker(delegate { dtPlugsBindingNavigatorSaveItem.Enabled = true; }));
+                dtPlugsBindingNavigator.Invoke(new MethodInvoker(delegate { bindingNavigatorMoveFirstItem.Invalidate(); }));
+                dtPlugsBindingNavigator.Invoke(new MethodInvoker(delegate { dtPlugsBindingNavigator.Refresh(); }));
+                Thread.Sleep(1);
+            }
+            
+            if(DgvDtPlugs.InvokeRequired)
+            {
+                DgvDtPlugs.Invoke(new MethodInvoker(delegate { DgvDtPlugs.Refresh(); }));
+                //DgvDtPlugs.Invoke(new MethodInvoker(delegate { DgvDtPlugs.Update(); }));
+            }
         }
 
         private void BGWCipher_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             TsBtnStartScan.Enabled = true;
             TsBtnExitScan.Enabled = true;
+        }
+
+        public void ProgressChanged(string infoText)
+        {
+            if (infoText.Substring(0, 3) == "dgv")
+            {
+                infoText = infoText.Substring(3);
+                CreateDataGridViewDATA(infoText);
+            }
+            else if (infoText.Substring(0, 3) == "lbl")
+            {
+                infoText = infoText.Substring(3);
+                if(dtPlugsBindingNavigator.InvokeRequired)
+                {
+                    dtPlugsBindingNavigator.Invoke(new MethodInvoker(delegate { TsLabelInfo.Text = infoText; }));
+                }
+            }
         }
     }
 }

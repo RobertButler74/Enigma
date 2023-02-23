@@ -181,6 +181,21 @@ namespace Enigma
         {
             TsBtnStartScan.Enabled = true;
             TsBtnExitScan.Enabled = true;
-        }        
+        }
+
+        public void ProgressChanged(string infoText)
+        {
+            if (infoText.Substring(0, 3) == "dgv")
+            {
+                infoText = infoText.Substring(3);
+                CreateDataGridViewDATA(infoText);
+            }
+            else if (infoText.Substring(0, 3) == "lbl")
+            {
+                infoText = infoText.Substring(3);
+                TsLabelInfo.Font = new Font("FreeMono", 10, FontStyle.Bold);
+                TsLabelInfo.Text = infoText;
+            }
+        }
     }
 }

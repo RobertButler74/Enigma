@@ -30,6 +30,9 @@ namespace Enigma
         public static int IoCDiff;
 
         public static bool blGuiUpdated = false;
+        public static int scanNumber = 0;
+
+        public static FrmPlugs tmpFrmPlug;
 
         public Cipher()
         {
@@ -56,9 +59,19 @@ namespace Enigma
         {
             cipherText = EnigmaCipher(enigmaMachine);
 
-            string dataInfo = SetData.SetDataInfo(enigmaMachine);
+            string dataInfo;
 
-            BGWCipher.ReportProgress(0, dataInfo);
+            var threadLbl = new Thread(() =>
+            {
+                dataInfo = SetData.SetDataInfo(enigmaMachine);
+                ReportProgress(dataInfo);
+            });
+            threadLbl.Start();
+            Thread.Sleep(1);
+
+            threadLbl.Join();
+
+
             //Debug.WriteLine(dataInfo.Substring(3));
 
             //while (!blGuiUpdated)
@@ -67,41 +80,73 @@ namespace Enigma
             //}
 
             //blGuiUpdated = false;
-
-            double IoC = Analyzation.MonogramIOC(cipherText);
-            IoC = Math.Round(IoC, 5);
-            intIoC = Convert.ToInt32(IoC * 100000);
-
-            IoCDiff = 0;
-
-            if (blIoCDiff && intIoC > intRefIoC)
-            {                
-                IoCDiff = intIoC - intRefIoC;
-            }
-
-            if ((!blIoCDiff && intIoC >= minIoC && !blCompare) || (blIoCDiff && IoCDiff > 0 && !blCompare) || (blCompare && cipherText == compare))
+            var threadDgv = new Thread(() =>
             {
-                dataInfo = SetData.SetDataInfo(enigmaMachine, messageText,cipherText, true);
-                BGWCipher.ReportProgress(0, dataInfo);
-                Thread.Sleep(50);
+                double IoC = Analyzation.MonogramIOC(cipherText);
+                IoC = Math.Round(IoC, 5);
+                intIoC = Convert.ToInt32(IoC * 100000);
 
-                //while (!blGuiUpdated)
-                //{
-                //    await Task.Delay(1);
-                //}
+                IoCDiff = 0;
 
-                //blGuiUpdated = false;
-            }
+                if (blIoCDiff && intIoC > intRefIoC)
+                {
+                    IoCDiff = intIoC - intRefIoC;
+                }
+
+                if ((!blIoCDiff && intIoC >= minIoC && !blCompare) || (blIoCDiff && IoCDiff > 0 && !blCompare) || (blCompare && cipherText == compare))
+                {
+                    dataInfo = SetData.SetDataInfo(enigmaMachine, messageText, cipherText, true);
+                    ReportProgress(dataInfo);
+                    //Thread.Sleep(50);
+                    Thread.Sleep(1);
+
+                    //while (!blGuiUpdated)
+                    //{
+                    //    await Task.Delay(1);
+                    //}
+
+                    //blGuiUpdated = false;
+                }
+            });
+            threadDgv.Start();
+            threadDgv.Join();
 
             /*
             Needed this time, because on the 2nd and 3rd scan, the IoCDiff in the table was
             negative, even though I just wanted them to be bigger then 0.
             This slowed the program down immensely. The 1st scan, went form 1 hour to 8 hours
             */
-            if (blIoCDiff)
+            //if (blIoCDiff)
+            //{
+            //    Thread.Sleep(250);
+            //}
+        }
+
+        private void ReportProgress(string dataInfo)
+        {
+            if (scanNumber == 1)
             {
-                Thread.Sleep(250);
+                //Thread.Sleep(250);
+                FrmRotorsAndKEY frmTemp = new FrmRotorsAndKEY();
+                frmTemp.ProgressChanged(dataInfo);
             }
-        }       
+            else if (scanNumber == 2)
+            {
+                FrmRotorRAndRingR frmTemp = new FrmRotorRAndRingR();
+                frmTemp.ProgressChanged(dataInfo);
+            }
+            else if (scanNumber == 3)
+            {
+                FrmRotorMAndRingM frmTemp = new FrmRotorMAndRingM();
+                frmTemp.ProgressChanged(dataInfo);
+            }
+            else if (scanNumber == 4)
+            {
+                //FrmPlugs frmTemp = new FrmPlugs();
+                tmpFrmPlug.ProgressChanged(dataInfo);
+            }
+
+        }
+
     }
 }
