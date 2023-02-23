@@ -64,20 +64,6 @@ namespace Enigma
                     if (plugNumber == maxPlugs)
                     {
                         EnigmaMachine.EnigmaSetup(ukw, walzen, cipherKEY, rings);
-
-                        //counter += 1;
-                        //string strCounter = counter.ToString("# ###");
-                        //strCounter = "Count: " + strCounter;
-                        //string msg = "Plugs: ";
-                        //for (int indexPlugs = 1; indexPlugs <= maxPlugs; indexPlugs++)
-                        //{
-                        //    msg += plugs[indexPlugs];
-                        //    msg += "-";
-                        //}
-                        //msg = msg.Substring(0, msg.Length - 1);
-                        //Debug.WriteLine(strCounter);
-                        //Debug.WriteLine(msg);
-                        //Debug.WriteLine("");
                     }
                 }
             }
