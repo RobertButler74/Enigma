@@ -65,7 +65,6 @@
             // PnlSelection
             // 
             this.PnlSelection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PnlSelection.Controls.Add(this.RbtnKEYs);
             this.PnlSelection.Controls.Add(this.BtnTestPlugs);
             this.PnlSelection.Controls.Add(this.GbxScanSelection);
             this.PnlSelection.Dock = System.Windows.Forms.DockStyle.Left;
@@ -89,6 +88,7 @@
             // 
             // GbxScanSelection
             // 
+            this.GbxScanSelection.Controls.Add(this.RbtnKEYs);
             this.GbxScanSelection.Controls.Add(this.RbtnPlug10);
             this.GbxScanSelection.Controls.Add(this.RbtnPlug9);
             this.GbxScanSelection.Controls.Add(this.RbtnPlug8);
@@ -105,7 +105,7 @@
             this.GbxScanSelection.Controls.Add(this.BtnOpenScan);
             this.GbxScanSelection.Location = new System.Drawing.Point(12, 6);
             this.GbxScanSelection.Name = "GbxScanSelection";
-            this.GbxScanSelection.Size = new System.Drawing.Size(257, 371);
+            this.GbxScanSelection.Size = new System.Drawing.Size(257, 413);
             this.GbxScanSelection.TabIndex = 0;
             this.GbxScanSelection.TabStop = false;
             this.GbxScanSelection.Text = "Scan selection";
@@ -115,8 +115,7 @@
             this.RbtnKEYs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.RbtnKEYs.AutoSize = true;
-            this.RbtnKEYs.Enabled = false;
-            this.RbtnKEYs.Location = new System.Drawing.Point(3, 614);
+            this.RbtnKEYs.Location = new System.Drawing.Point(6, 390);
             this.RbtnKEYs.Name = "RbtnKEYs";
             this.RbtnKEYs.Size = new System.Drawing.Size(79, 17);
             this.RbtnKEYs.TabIndex = 4;
@@ -310,7 +309,6 @@
             this.Text = "Enigma";
             this.Load += new System.EventHandler(this.FrmEnigma_Load);
             this.PnlSelection.ResumeLayout(false);
-            this.PnlSelection.PerformLayout();
             this.GbxScanSelection.ResumeLayout(false);
             this.GbxScanSelection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxEnigma)).EndInit();

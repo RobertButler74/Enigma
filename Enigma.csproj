@@ -50,6 +50,9 @@
     <Compile Include="Challenge10Scans.cs" />
     <Compile Include="Cipher.cs" />
     <Compile Include="Combinations.cs" />
+    <Compile Include="DsEnigmaChallenges.cs">
+      <DependentUpon>DsEnigmaChallenges.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsEnigmaChallenges.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -62,6 +65,12 @@
     </Compile>
     <Compile Include="FrmEnigma.Designer.cs">
       <DependentUpon>FrmEnigma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKEYs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKEYs.Designer.cs">
+      <DependentUpon>FrmKEYs.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPlugs.cs">
       <SubType>Form</SubType>
@@ -99,6 +108,9 @@
     <Compile Include="SetData.cs" />
     <EmbeddedResource Include="FrmEnigma.resx">
       <DependentUpon>FrmEnigma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKEYs.resx">
+      <DependentUpon>FrmKEYs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPlugs.resx">
       <DependentUpon>FrmPlugs.cs</DependentUpon>

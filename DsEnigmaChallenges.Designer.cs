@@ -1644,8 +1644,6 @@ namespace Enigma {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnIOC;
-            
             private global::System.Data.DataColumn columnReflector;
             
             private global::System.Data.DataColumn columnRotorLeft;
@@ -1700,14 +1698,6 @@ namespace Enigma {
             public global::System.Data.DataColumn IDColumn {
                 get {
                     return this.columnID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IOCColumn {
-                get {
-                    return this.columnIOC;
                 }
             }
             
@@ -1812,11 +1802,10 @@ namespace Enigma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtKEYsRow AdddtKEYsRow(int IOC, string Reflector, string RotorLeft, string RotorMiddle, string RotorRight, string CipherKEY, string Plugs, string MessageText, string CipherText) {
+            public dtKEYsRow AdddtKEYsRow(string Reflector, string RotorLeft, string RotorMiddle, string RotorRight, string CipherKEY, string Plugs, string MessageText, string CipherText) {
                 dtKEYsRow rowdtKEYsRow = ((dtKEYsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        IOC,
                         Reflector,
                         RotorLeft,
                         RotorMiddle,
@@ -1848,7 +1837,6 @@ namespace Enigma {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnIOC = base.Columns["IOC"];
                 this.columnReflector = base.Columns["Reflector"];
                 this.columnRotorLeft = base.Columns["RotorLeft"];
                 this.columnRotorMiddle = base.Columns["RotorMiddle"];
@@ -1864,8 +1852,6 @@ namespace Enigma {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnIOC = new global::System.Data.DataColumn("IOC", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIOC);
                 this.columnReflector = new global::System.Data.DataColumn("Reflector", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReflector);
                 this.columnRotorLeft = new global::System.Data.DataColumn("RotorLeft", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3431,22 +3417,6 @@ namespace Enigma {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int IOC {
-                get {
-                    try {
-                        return ((int)(this[this.tabledtKEYs.IOCColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IOC\' in table \'dtKEYs\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledtKEYs.IOCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Reflector {
                 get {
                     try {
@@ -3571,18 +3541,6 @@ namespace Enigma {
                 set {
                     this[this.tabledtKEYs.CipherTextColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsIOCNull() {
-                return this.IsNull(this.tabledtKEYs.IOCColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetIOCNull() {
-                this[this.tabledtKEYs.IOCColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

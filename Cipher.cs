@@ -33,6 +33,7 @@ namespace Enigma
         public static int scanNumber = 0;
 
         public static FrmPlugs tmpFrmPlug;
+        public static FrmKEYs tmpFrmKEYs;
 
         public Cipher()
         {
@@ -145,7 +146,11 @@ namespace Enigma
                 //FrmPlugs frmTemp = new FrmPlugs();
                 tmpFrmPlug.ProgressChanged(dataInfo);
             }
-
+            else if (scanNumber == 5)
+            {
+                //FrmPlugs frmTemp = new FrmPlugs();
+                tmpFrmKEYs.ProgressChanged(dataInfo);
+            }
         }
 
     }

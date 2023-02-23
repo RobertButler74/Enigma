@@ -55,6 +55,11 @@ namespace Enigma
                 frmTemp = new FrmRotorMAndRingM();
                 FrmRotorMAndRingM.ownerGBX = GbxScanSelection;
             }
+            else if (RbtnKEYs.Checked)
+            {
+                frmTemp = new FrmKEYs();
+                FrmKEYs.ownerGBX = GbxScanSelection;
+            }
             else
             {
                 string plugNumber = GbxScanSelection.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Name;

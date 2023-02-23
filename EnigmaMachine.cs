@@ -14,7 +14,7 @@ namespace Enigma
         public static string[] plugs = new string[11];
         public static int counter = 0;
 
-        public static void SetPlugs(int fromPlug, int toPlug, int ukw, int walzen, string cipherKEY, string rings)
+        public static void SetPlugs(int fromPlug, int toPlug, Nullable <int> ukw, Nullable <int> walzen, string cipherKEY = null, string rings = null)
         {
             int index;
             for (index = fromPlug; index <= toPlug; index++)
@@ -23,7 +23,7 @@ namespace Enigma
             Array.Clear(plugs, 0, plugs.Length);
         }
 
-        public static void SetPlug(int plugNumber, int ukw, int walzen, string cipherKEY, string rings, int maxPlugs = 10, int indexPlugStart = 0)
+        public static void SetPlug(int plugNumber, Nullable <int> ukw, Nullable <int> walzen, string cipherKEY = null, string rings = null, int maxPlugs = 10, int indexPlugStart = 0)
         {
             int index;
             int indexPlugNumber;

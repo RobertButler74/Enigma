@@ -70,7 +70,6 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
-              <xs:element name="IOC" msprop:Generator_ColumnPropNameInTable="IOCColumn" msprop:Generator_ColumnPropNameInRow="IOC" msprop:Generator_UserColumnName="IOC" msprop:Generator_ColumnVarNameInTable="columnIOC" type="xs:int" minOccurs="0" />
               <xs:element name="Reflector" msprop:Generator_ColumnPropNameInTable="ReflectorColumn" msprop:Generator_ColumnPropNameInRow="Reflector" msprop:Generator_UserColumnName="Reflector" msprop:Generator_ColumnVarNameInTable="columnReflector" type="xs:string" minOccurs="0" />
               <xs:element name="RotorLeft" msprop:Generator_ColumnPropNameInTable="RotorLeftColumn" msprop:Generator_ColumnPropNameInRow="RotorLeft" msprop:Generator_UserColumnName="RotorLeft" msprop:Generator_ColumnVarNameInTable="columnRotorLeft" type="xs:string" minOccurs="0" />
               <xs:element name="RotorMiddle" msprop:Generator_ColumnPropNameInTable="RotorMiddleColumn" msprop:Generator_ColumnPropNameInRow="RotorMiddle" msprop:Generator_UserColumnName="RotorMiddle" msprop:Generator_ColumnVarNameInTable="columnRotorMiddle" type="xs:string" minOccurs="0" />

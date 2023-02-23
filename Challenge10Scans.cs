@@ -68,5 +68,15 @@ namespace Enigma
 
         }
 
+        public static void KEYs()
+        {
+            Cipher.blCompare = true;
+            Cipher.compare = "GXT";
+            Cipher.scanNumber = 5;
+            Cipher.messageText = "EDF";
+
+            EnigmaMachine.SetPlugs(1, 10, null, null, null, null);
+        }
+
     }
 }
